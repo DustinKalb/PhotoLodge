@@ -1,0 +1,20 @@
+[
+  {
+    "src": "Images/asaro.PNG",
+    "name": "Asaro",
+    "description": "3d model of the Asaro head planes",
+    "tags": ["3d", "shadows"]
+  },
+  {
+    "src": "Images/loomis.PNG",
+    "name": "Loomis",
+    "description": "Guide to the Loomis method for drawing heads",
+    "tags": ["2d", "tutorial"]
+  },
+  {
+    "src": "Images/marcbrunet.PNG",
+    "name": "Marc Brunet",
+    "description": "A bunch of heads drawn by the artist Marc Brunet",
+    "tags": ["reference", "faces"]
+  }
+]
