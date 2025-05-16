@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoLodge - All Files</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="plodgestyle.css">
+</head>
+
+<body class="bg-light">
+    <!-- Top Navbar with logo and search bar -->
+    <nav class="navbar navbar-expand-lg navbar-light px-0">
+        <div class="d-flex w-100 align-items-center" style="gap: 1rem;">
+            <a class="navbar-brand ms-3 d-flex align-items-center" href="PhotoLodge.html">
+                <img src="images/photolodgelogo.png" alt="PhotoLodge Logo" style="height:32px; width:auto; margin-right:0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.25);">
+                PhotoLodge
+            </a>
+            <form class="flex-grow-1 d-flex justify-content-center">
+                <input id="searchInput" class="form-control search-brown" style="max-width: 500px;" type="search" placeholder="Search..." aria-label="Search">
+            </form>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Side Navbar with upload button and navigation links -->
+                <nav class="col-12 col-md-2 side-navbar d-flex flex-md-column align-items-start p-3">
+                    <button id="uploadBtn" class="btn btn-primary mb-2">+ Upload</button>
+                    <ul class="nav flex-column w-100 mt-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="PhotoLodge.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="AllFiles.html" aria-current="page">All Files</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- Main Content Area for photo cards -->
+                <main class="col-12 col-md-10 main-content-fix">
+                    <div class="container py-5">
+                        <div id="photo-list" class="row g-4">
+                            <!-- Cards will be dynamically added here -->
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for image preview & upload -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row align-items-center">
+                        <!-- Image preview/upload area -->
+                        <div class="col-md-7 text-center mb-3 mb-md-0">
+                            <img id="modalImage" src="" alt="" class="img-fluid rounded" style="max-height:400px;">
+                            <!-- For upload: image preview -->
+                            <input type="file" id="modalFileInput" accept="image/*" class="form-control mt-3 d-none">
+                        </div>
+                        <!-- Image details and upload fields -->
+                        <div class="col-md-5">
+                            <h5 id="modalTitle"></h5>
+                            <input type="text" id="modalTitleInput" class="form-control mb-2 d-none"
+                                placeholder="Image Name">
+                            <div id="modalTags" class="mt-2"></div>
+                            <input type="text" id="modalTagsInput" class="form-control mb-2 d-none"
+                                placeholder="Tags (comma separated)">
+                            <p id="modalDescription" class="mb-0"></p>
+                            <textarea id="modalDescriptionInput" class="form-control d-none" rows="3"
+                                placeholder="Description"></textarea>
+                            <button id="saveUploadBtn" class="btn btn-success mt-3 d-none">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let allImages = [];
+
+        // Load images from images.json and render them
+        fetch('images.json')
+            .then(response => response.json())
+            .then(images => {
+                allImages = images;
+                renderImages(images);
+            })
+            .catch(error => {
+                console.error('Error loading images:', error);
+            });
+
+        // Render all images in a single section
+        function renderImages(images) {
+            const photoList = document.getElementById('photo-list');
+            photoList.innerHTML = '';
+
+            // Only one section: "All Files"
+            const sectionTitle = document.createElement('h3');
+            sectionTitle.textContent = 'All Files';
+            sectionTitle.className = 'mt-4 mb-3';
+            photoList.appendChild(sectionTitle);
+
+            const row = document.createElement('div');
+            row.className = 'row g-4 mb-4';
+            images.forEach(image => {
+                const cardCol = document.createElement('div');
+                cardCol.className = 'col-12 col-md-6 col-lg-4';
+
+                // Card HTML for each image
+                cardCol.innerHTML = `
+                    <div class="card shadow" style="cursor:pointer;">
+                        <img src="${image.src}" class="card-img-top" alt="${image.name}">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">${image.name}</h5>
+                        </div>
+                    </div>
+                `;
+                // Card click opens preview modal
+                cardCol.querySelector('.card').onclick = function () {
+                    showModal({
+                        mode: 'preview',
+                        image
+                    });
+                };
+                row.appendChild(cardCol);
+            });
+            photoList.appendChild(row);
+        }
+
+        // Show modal for image preview or upload
+        function showModal({ mode, image }) {
+            const modalImage = document.getElementById('modalImage');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalTitleInput = document.getElementById('modalTitleInput');
+            const modalTags = document.getElementById('modalTags');
+            const modalTagsInput = document.getElementById('modalTagsInput');
+            const modalDescription = document.getElementById('modalDescription');
+            const modalDescriptionInput = document.getElementById('modalDescriptionInput');
+            const modalFileInput = document.getElementById('modalFileInput');
+            const saveUploadBtn = document.getElementById('saveUploadBtn');
+
+            if (mode === 'preview') {
+                // Show preview fields, hide upload fields
+                modalImage.src = image.src;
+                modalImage.alt = image.name;
+                modalTitle.innerText = image.name;
+                modalTitle.classList.remove('d-none');
+                modalTitleInput.classList.add('d-none');
+                modalTags.innerHTML = Array.isArray(image.tags) ? image.tags.map(tag =>
+                    `<span class="badge bg-secondary me-1">#${tag}</span>`
+                ).join('') : '';
+                modalTags.classList.remove('d-none');
+                modalTagsInput.classList.add('d-none');
+                modalDescription.innerText = image.description || '';
+                modalDescription.classList.remove('d-none');
+                modalDescriptionInput.classList.add('d-none');
+                modalFileInput.classList.add('d-none');
+                saveUploadBtn.classList.add('d-none');
+            } else if (mode === 'upload') {
+                // Show upload fields, hide preview fields
+                modalImage.src = '';
+                modalImage.alt = '';
+                modalTitle.innerText = '';
+                modalTitle.classList.add('d-none');
+                modalTitleInput.value = '';
+                modalTitleInput.classList.remove('d-none');
+                modalTags.innerHTML = '';
+                modalTags.classList.add('d-none');
+                modalTagsInput.value = '';
+                modalTagsInput.classList.remove('d-none');
+                modalDescription.innerText = '';
+                modalDescription.classList.add('d-none');
+                modalDescriptionInput.value = '';
+                modalDescriptionInput.classList.remove('d-none');
+                modalFileInput.value = '';
+                modalFileInput.classList.remove('d-none');
+                saveUploadBtn.classList.remove('d-none');
+            }
+
+            // Show the Bootstrap modal
+            const modal = new bootstrap.Modal(document.getElementById('imageModal'));
+            modal.show();
+
+            // Handle image preview for upload mode
+            if (mode === 'upload') {
+                modalFileInput.onchange = function (e) {
+                    const file = e.target.files[0];
+                    if (file) {
+                        const reader = new FileReader();
+                        reader.onload = function (evt) {
+                            modalImage.src = evt.target.result;
+                        };
+                        reader.readAsDataURL(file);
+                    }
+                };
+
+                // Save button logic: add new image to gallery (in-memory)
+                saveUploadBtn.onclick = function () {
+                    const name = modalTitleInput.value.trim();
+                    const description = modalDescriptionInput.value.trim();
+                    const tags = modalTagsInput.value.split(',').map(t => t.trim()).filter(Boolean);
+                    const src = modalImage.src;
+                    if (!name || !src) {
+                        alert('Please provide an image and a name.');
+                        return;
+                    }
+                    allImages.push({ src, name, description, tags });
+                    renderImages(allImages);
+                    modal.hide();
+                };
+            } else {
+                // Remove upload listeners in preview mode
+                modalFileInput.onchange = null;
+                saveUploadBtn.onclick = null;
+            }
+        }
+
+        // Open upload modal when upload button is clicked
+        document.getElementById('uploadBtn').onclick = function () {
+            showModal({ mode: 'upload' });
+        };
+
+        // Search functionality: filter images by name, description, or tags
+        document.getElementById('searchInput').addEventListener('input', function () {
+            const query = this.value.toLowerCase();
+            const filtered = allImages.filter(img =>
+                (img.name && img.name.toLowerCase().includes(query)) ||
+                (img.description && img.description.toLowerCase().includes(query)) ||
+                (Array.isArray(img.tags) && img.tags.some(tag => tag.toLowerCase().includes(query)))
+            );
+            renderImages(filtered);
+        });
+    </script>
+
+    <!-- Bootstrap JS bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

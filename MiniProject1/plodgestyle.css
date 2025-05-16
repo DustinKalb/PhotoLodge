@@ -1,0 +1,132 @@
+/* Set base background and minimum height for the page */
+html,
+body,
+.container-fluid {
+    min-height: 100vh;
+    background-color: #fff;
+}
+
+/* Card styling for photo gallery */
+.card {
+    height: 100%;
+    border: 2px solid #8B5C2A;
+    border-radius: 8px;
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 200px;
+}
+
+/* Side navbar layout and appearance */
+.side-navbar {
+    min-height: 100vh;
+    box-shadow: none;
+    width: 250px;
+    max-width: 100%;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    position: fixed;
+    top: 56px; /* below top navbar */
+    left: 0;
+    z-index: 1030;
+    background: #FFF4E9;
+    height: calc(100vh - 56px);
+    overflow-y: auto;
+}
+
+/* Responsive adjustments for side navbar on small screens */
+@media (max-width: 767px) {
+    .side-navbar {
+        position: static;
+        min-height: auto;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        width: 100%;
+        height: auto;
+        top: 0;
+    }
+}
+
+/* Main content shifts right to accommodate side navbar */
+.main-content-fix {
+    transition: margin-left 0.3s ease;
+    margin-left: 250px;
+}
+
+@media (max-width: 767px) {
+    .main-content-fix {
+        margin-left: 0;
+    }
+}
+
+/* Top navbar styling */
+.navbar {
+    box-shadow: none;
+    position: sticky;
+    top: 0;
+    z-index: 1040;
+    background: #FFF4E9;
+}
+
+.navbar .container {
+    margin-left: 0;
+    padding-left: 0;
+    max-width: 100%;
+}
+
+/* "PhotoLodge" brand styling */
+.navbar-brand {
+    font-size: 24px;
+    color: #8B5C2A;
+    margin-left: 0;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Sidebar nav links and upload button styling */
+.side-navbar .nav-link {
+    color: #8B5C2A;
+    font-size: 20px;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 1.35rem;
+    margin-left: 0.25rem;
+}
+
+.side-navbar #uploadBtn {
+    width: 50%;
+    min-width: 100px;
+    font-size: 20px;
+    padding: 0.75rem 0;
+    align-self: flex-start;
+    margin-left: 0.25rem;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #8B5C2A;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Section titles in the photo list */
+#photo-list h3 {
+    font-size: 20px;
+    color: #bbb;
+}
+
+/* Search bar styling */
+.search-brown {
+    border: 2px solid #8B5C2A;
+    box-shadow: none;
+    background-color: #fff;
+}
+
+/* Highlight the active nav-link ("Home") with a white background and black text */
+.side-navbar .nav-link.active {
+    background: #fff;
+    color: #000;
+    border-radius: 8px;
+    font-weight: normal;
+    width: 100%;
+    display: block;
+}
