@@ -16,5 +16,35 @@
     "name": "Marc Brunet",
     "description": "A bunch of heads drawn by the artist Marc Brunet",
     "tags": ["reference", "faces"]
+  },
+  {
+    "src": "Images/fish.png",
+    "name": "Fish",
+    "description": "An old doodle of a fish I did",
+    "tags": ["2d", "doodle", "fish", "my art"]
+  },
+  {
+    "src": "Images/hair1.jpg",
+    "name": "Wolfcut 1",
+    "description": "Girl with a wolfcut hairstyle",
+    "tags": ["real", "wolfcut", "hair", "brown hair", "brown eyes"]
+  },
+  {
+    "src": "Images/hair2.jpg",
+    "name": "Wolfcut 2",
+    "description": "Girl with a wolfcut hairstyle",
+    "tags": ["real", "wolfcut", "hair", "brown hair"]
+  },
+  {
+    "src": "Images/hands.PNG",
+    "name": "Shrugging Hands",
+    "description": "Two pictures of a girl. One she is shrugging and the other she is holding her hands up",
+    "tags": ["shrug", "upper body", "hands"]
+  },
+  {
+    "src": "Images/myhero.jpg",
+    "name": "My Hero Academia",
+    "description": "Midoriya and Bakugo from My Hero Academia",
+    "tags": []
   }
 ]
