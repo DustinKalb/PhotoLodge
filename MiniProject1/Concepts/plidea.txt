@@ -1,0 +1,9 @@
+Ideally, users should be able to:
+
+1) Upload images with a name, tags, and a description.
+
+2) Use a search bar to find images with matching tags and description.
+
+3) View stored images.
+
+4) Navigate between the "Home" menu and the "All Files" menu for different viewing preferences.
