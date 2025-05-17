@@ -46,5 +46,17 @@
     "name": "My Hero Academia",
     "description": "Midoriya and Bakugo from My Hero Academia",
     "tags": []
+  },
+  {
+    "src": "Images/wildafinished.png",
+    "name": "Wilda",
+    "description": "My drawing of my character Wilda, she is my coin fantasy character with monster like features",
+    "tags": ["fantasy", "my art", "character design", "brown hair", "red eyes", "fully body", "2d"]
+  },
+  {
+    "src": "Images/babyowen.png",
+    "name": "Baby Owen",
+    "description": "My drawing of my DnD character Owen. This particular drawing is of him as a baby",
+    "tags": ["fantasy", "my art", "Dnd", "male", "monster", "dragon"]
   }
 ]
