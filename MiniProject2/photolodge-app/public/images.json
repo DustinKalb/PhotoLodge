@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "src": "Images/asaro.PNG",
+    "name": "Asaro",
+    "description": "3d model of the Asaro head planes",
+    "tags": ["3d", "shadows"]
+  },
+  {
+    "id": 2,
+    "src": "Images/loomis.PNG",
+    "name": "Loomis",
+    "description": "Guide to the Loomis method for drawing heads",
+    "tags": ["2d", "tutorial"]
+  },
+  {
+    "id": 3,
+    "src": "Images/marcbrunet.PNG",
+    "name": "Marc Brunet",
+    "description": "A bunch of heads drawn by the artist Marc Brunet",
+    "tags": ["reference", "faces"]
+  },
+  {
+    "id": 4,
+    "src": "Images/fish.png",
+    "name": "Fish",
+    "description": "An old doodle of a fish I did",
+    "tags": ["2d", "doodle", "fish", "my art"]
+  },
+  {
+    "id": 5,
+    "src": "Images/hair1.jpg",
+    "name": "Wolfcut 1",
+    "description": "Girl with a wolfcut hairstyle",
+    "tags": ["real", "wolfcut", "hair", "brown hair", "brown eyes"]
+  },
+  {
+    "id": 6,
+    "src": "Images/hair2.jpg",
+    "name": "Wolfcut 2",
+    "description": "Girl with a wolfcut hairstyle",
+    "tags": ["real", "wolfcut", "hair", "brown hair"]
+  },
+  {
+    "id": 7,
+    "src": "Images/hands.PNG",
+    "name": "Shrugging Hands",
+    "description": "Two pictures of a girl. One she is shrugging and the other she is holding her hands up",
+    "tags": ["shrug", "upper body", "hands"]
+  },
+  {
+    "id": 8,
+    "src": "Images/myhero.jpg",
+    "name": "My Hero Academia",
+    "description": "Midoriya and Bakugo from My Hero Academia",
+    "tags": []
+  },
+  {
+    "id": 9,
+    "src": "Images/wildafinished.png",
+    "name": "Wilda",
+    "description": "My drawing of my character Wilda, she is my coin fantasy character with monster like features",
+    "tags": ["fantasy", "my art", "character design", "brown hair", "red eyes", "fully body", "2d"]
+  },
+  {
+    "id": 10,
+    "src": "Images/babyowen.png",
+    "name": "Baby Owen",
+    "description": "My drawing of my DnD character Owen. This particular drawing is of him as a baby",
+    "tags": ["fantasy", "my art", "Dnd", "male", "monster", "dragon"]
+  }
+]
