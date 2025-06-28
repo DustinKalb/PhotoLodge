@@ -24,7 +24,7 @@ export default function UploadForm({ onSave, onClose }) {
       <div>
         <label>Name:</label>
         <input value={name} onChange={e => setName(e.target.value)} required
-        style={{ backgroundColor: "white", borderColor: "gray", borderRadius: "5px" }} />
+        style={{ backgroundColor: "white", color: "black", borderColor: "gray", borderRadius: "5px" }} />
       </div>
       <div>
         <label>Description:</label>

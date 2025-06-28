@@ -19,8 +19,8 @@ function NavBar() {
           <img
             src="/images/photolodgelogo.png"
             alt="PhotoLodge Logo"
-            width={35}
-            height={35}
+            width={30}
+            height={30}
             style={{ marginRight: 12 }}
           />
           <Typography variant="h6" component="div" sx={{ mr: 2 }}>

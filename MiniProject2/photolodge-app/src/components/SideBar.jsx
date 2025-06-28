@@ -24,14 +24,7 @@ export default function BasicList() {
             <ListItemButton
             component={Link}
             href="/"
-            selected={path === "/"}
-            sx={{
-                "&.Mui-selected": {
-                backgroundColor: "rgba(255,255,255,0.08)"},
-                "&:Mui-selected:hover": {
-                backgroundColor: "rgba(255,255,255,0.08)",
-                }
-            }}>
+            selected={path === "/"}>
               <ListItemIcon>
                 <HomeIcon />
               </ListItemIcon>
@@ -42,14 +35,7 @@ export default function BasicList() {
             <ListItemButton
             component={Link}
             href="/all-files"
-            selected={path.startsWith("/all-files")}
-            sx={{
-                "&.Mui-selected": {
-                backgroundColor: "rgba(255,255,255,0.08)"},
-                "&:Mui-selected:hover": {
-                backgroundColor: "rgba(255,255,255,0.08)",
-                }
-            }}>
+            selected={path.startsWith("/all-files")}>
               <ListItemIcon>
                 <BurstModeIcon />
               </ListItemIcon>
