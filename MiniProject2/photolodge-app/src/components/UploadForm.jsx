@@ -29,12 +29,12 @@ export default function UploadForm({ onSave, onClose }) {
       <div>
         <label>Description:</label>
         <textarea value={description} onChange={e => setDescription(e.target.value)}
-        style={{ backgroundColor: "white", borderColor: "gray", borderRadius: "5px", borderWidth: "2px" }} />
+        style={{ backgroundColor: "white", color: "black", borderColor: "gray", borderRadius: "5px", borderWidth: "2px" }} />
       </div>
       <div>
         <label>Tags (comma separated):</label>
         <input value={tags} onChange={e => setTags(e.target.value)}
-        style={{ backgroundColor: "white", borderColor: "gray", borderRadius: "5px" }} />
+        style={{ backgroundColor: "white", color: "black", borderColor: "gray", borderRadius: "5px" }} />
       </div>
       <button type="submit">Save</button>
     </form>
