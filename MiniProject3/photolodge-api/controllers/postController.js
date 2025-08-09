@@ -1,5 +1,6 @@
 "use strict";
 let Models = require("../models");
+const cloudinary = require("../utils/cloudinary");
 
 const getPosts = (res) => {
     Models.Post.find({})
@@ -32,13 +33,22 @@ const updatePost = (req, res) => {
     });
 };
 
-const deletePost = (req, res) => {
-  Models.Post.findByIdAndDelete(req.params.id)
-    .then((data) => res.send({ result: 200, data: data }))
-    .catch((err) => {
-      console.log(err);
-      res.send({ result: 500, error: err.message });
-    });
+const deletePost = async (req, res) => {
+  try {
+    const post = await Models.Post.findById(req.params.id);
+
+    const filename = post.imageUrl.split("/").pop().replace(/\.[^/.]+$/, "");
+    const publicId = `photolodge-app/${filename}`;
+
+    await cloudinary.uploader.destroy(publicId);
+
+    await Models.Post.findByIdAndDelete(req.params.id);
+
+    res.send({ result: 200, message: "Post and image deleted" });
+  } catch (err) {
+    console.log(err);
+    res.send({ result: 500, error: err.message });
+  }
 };
 
 const getUserPosts = (req, res) => {

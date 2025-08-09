@@ -36,6 +36,10 @@ export default function ImageGallery() {
     setModalOpen(true);
   };
 
+  const handleEdit = () => {
+    setModalMode("edit");
+  };
+
   {/* Filter images by search term (tags or description) */}
   const filteredImages = search.trim()
     ? images.filter(img => {
@@ -101,7 +105,7 @@ export default function ImageGallery() {
         mode={modalMode}
         image={selectedImage}
         onClose={() => setModalOpen(false)}
-        onSave={() => setModalOpen(false)}
+        onEdit={handleEdit}
       />
       <div style={{ position: "fixed", bottom: 32, right: 32 }}>
         <FloatingActionButton onClick={handleUploadClick} />

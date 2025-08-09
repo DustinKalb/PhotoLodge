@@ -1,11 +1,12 @@
 import Modal from '@mui/material/Modal';
 import UploadForm from "./UploadForm.jsx";
 import ImagePreview from "./ImagePreview.jsx";
+import EditForm from "./EditForm.jsx";
 import { useSpring, animated } from '@react-spring/web';
 
 {/* Component for modal that handles either image upload or preview */}
 
-export default function ImageModal({ open, mode, image, onClose, onSave }) {
+export default function ImageModal({ open, mode, image, onClose, onSave, onEdit }) {
   const fade = useSpring({
     opacity: open ? 1 : 0,
     config: { tension: 300, friction: 30 },
@@ -34,8 +35,10 @@ export default function ImageModal({ open, mode, image, onClose, onSave }) {
       >
         {mode === "upload" ? (
           <UploadForm onSave={onSave} onClose={onClose} />
+        ) : mode === "edit" ? (
+          <EditForm post={image} onSave={onSave} onClose={onClose} />
         ) : (
-          <ImagePreview image={image} onClose={onClose} />
+          <ImagePreview image={image} onClose={onClose} onEdit={onEdit} />
         )}
       </animated.div>
     </Modal>
