@@ -1,4 +1,4 @@
-import AllImagesGallery from "../../components/AllImagesGallery.jsx";
+import AllImagesGallery from "../../components/AllImagesGallery/AllImagesGallery.jsx";
 
 export const metadata = {
   title: "All Files",

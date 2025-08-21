@@ -1,0 +1,186 @@
+/* [project]/src/components/ImagePreview/ImagePreview.css [app-client] (css) */
+.image-preview-img {
+  border-radius: 8px;
+  max-width: 100%;
+  margin: 0 auto 12px;
+  display: block;
+  box-shadow: 0 2px 12px #00000014;
+}
+
+.image-preview-tags {
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0;
+  display: flex;
+}
+
+.image-preview-tag {
+  color: #e3e3e3;
+  letter-spacing: .2px;
+  background: #111;
+  border-radius: 6px;
+  margin-bottom: 2px;
+  margin-right: 2px;
+  padding: 2px 8px;
+  font-size: 13px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.image-preview-actions {
+  justify-content: center;
+  gap: 8px;
+  display: flex;
+}
+
+.image-preview-action-btn {
+  border-radius: 50%;
+  min-width: 36px;
+  padding: 6px 10px;
+  transition: background .15s;
+  color: tan !important;
+}
+
+.image-preview-action-btn:hover {
+  background: #f5f5dc33;
+}
+
+
+/* [project]/src/components/EditForm/EditForm.css [app-client] (css) */
+.edit-form {
+  flex-direction: column;
+  gap: 18px;
+  display: flex;
+}
+
+.edit-form-img {
+  border-radius: 8px;
+  align-self: center;
+  max-width: 100%;
+  max-height: 200px;
+  margin-bottom: 8px;
+}
+
+.edit-form-folder-select {
+  margin: 12px 0;
+}
+
+
+/* [project]/src/components/ImageModal/ImageModal.css [app-client] (css) */
+.image-modal-box {
+  color: #fff;
+  background: #222;
+  border-radius: 16px;
+  outline: none;
+  max-width: 500px;
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 32px;
+}
+
+.image-modal-box:focus {
+  outline: none;
+}
+
+
+/* [project]/src/components/ImageGallery/ImageGallery.css [app-client] (css) */
+.gallery-folders-header {
+  align-items: center;
+  margin: 20px 5px 0;
+  display: flex;
+}
+
+.gallery-folders-header h5 {
+  color: #e3e3e3;
+  margin: 0 12px 0 0;
+}
+
+.gallery-add-folder-btn {
+  cursor: pointer;
+  background: tan;
+  border: none;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  margin-left: 4px;
+  padding: 0;
+  display: flex;
+}
+
+.gallery-add-folder-icon {
+  color: #000;
+  font-size: 15px !important;
+}
+
+.gallery-folders-row {
+  align-items: center;
+  display: flex;
+}
+
+.gallery-folder-link {
+  text-decoration: none;
+}
+
+.gallery-folder-item {
+  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 16px;
+  display: flex;
+}
+
+.gallery-folder-icon {
+  color: #e3e3e3;
+  margin-bottom: 4px;
+  font-size: 64px !important;
+}
+
+.gallery-folder-name {
+  color: #e3e3e3;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.gallery-divider {
+  border: none;
+  border-top: 1px solid #444;
+  margin: 16px 0;
+}
+
+.gallery-section-header {
+  color: #e3e3e3;
+  margin: 20px 5px;
+}
+
+.gallery-images-row {
+  flex-wrap: wrap;
+  gap: 16px;
+  display: flex;
+}
+
+.gallery-image-item {
+  cursor: pointer;
+  border-radius: 8px;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.gallery-image-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-fab-container {
+  position: fixed;
+  bottom: 32px;
+  right: 50px;
+}
+
+
+/*# sourceMappingURL=src_components_819427c3._.css.map*/

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/components/SearchBar/SearchBar.css"],"sourcesContent":["\r\n.searchbar-root {\r\n\tposition: relative;\r\n\twidth: 100%;\r\n}\r\n\r\n.searchbar-icon {\r\n\tposition: absolute;\r\n\tleft: 12px;\r\n\ttop: 50%;\r\n\ttransform: translateY(-50%);\r\n\tcolor: #888;\r\n\tpointer-events: none;\r\n\tz-index: 2;\r\n}\r\n\r\n.searchbar-input {\r\n\twidth: 100%;\r\n\tpadding: 8px 12px 8px 40px;\r\n\tfont-size: 1rem;\r\n\tborder-radius: 25px;\r\n\tborder: 1px solid rgba(255, 255, 255, 0.08);\r\n\tbackground-color: rgba(255, 255, 255, 0.08);\r\n\tcolor: white;\r\n\toutline: none;\r\n\ttransition: border 0.15s, background 0.15s;\r\n}\r\n.searchbar-input:focus {\r\n\tborder: 1.5px solid #bfa76a;\r\n\tbackground-color: rgba(255,255,255,0.13);\r\n}\r\n"],"names":[],"mappings":"AACA;;;;;AAKA;;;;;;;;;;AAUA;;;;;;;;;;;;AAWA"}}]
+}

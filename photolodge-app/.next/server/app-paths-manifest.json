@@ -1,8 +1,8 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
   "/all-files/page": "app/all-files/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
   "/folder/[folderId]/page": "app/folder/[folderId]/page.js",
   "/login/page": "app/login/page.js",
-  "/page": "app/page.js"
+  "/page": "app/page.js",
+  "/sign-up/page": "app/sign-up/page.js"
 }

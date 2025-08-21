@@ -1,0 +1,38 @@
+
+.upload-form {
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+	min-width: 260px;
+	max-width: 400px;
+	margin: 0 auto;
+	padding: 18px 0 0 0;
+}
+
+.upload-form-title {
+	text-align: center;
+	font-size: 1.3rem;
+	font-weight: 600;
+	color: #222;
+	margin-bottom: 0;
+}
+
+.upload-form-preview {
+	max-width: 100%;
+	max-height: 200px;
+	border-radius: 8px;
+	margin-bottom: 8px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.upload-form-file-btn {
+	align-self: center !important;
+	margin-top: 8px !important;
+	margin-bottom: 8px !important;
+}
+
+.upload-form-folder-select {
+	margin: 12px 0 !important;
+}

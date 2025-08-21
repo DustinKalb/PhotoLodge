@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/components/FloatingActionButton/FloatingActionButton.css"],"sourcesContent":["\r\n.fab-box > :not(style) {\r\n\tmargin: 8px;\r\n}\r\n\r\n.fab-tan {\r\n\tbackground-color: tan !important;\r\n}\r\n"],"names":[],"mappings":"AACA;;;;AAIA"}}]
+}

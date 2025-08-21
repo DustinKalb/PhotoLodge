@@ -1,0 +1,8 @@
+
+.fab-box > :not(style) {
+	margin: 8px;
+}
+
+.fab-tan {
+	background-color: tan !important;
+}

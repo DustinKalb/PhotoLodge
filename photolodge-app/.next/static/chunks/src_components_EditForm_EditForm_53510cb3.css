@@ -1,0 +1,21 @@
+/* [project]/src/components/EditForm/EditForm.css [app-client] (css) */
+.edit-form {
+  flex-direction: column;
+  gap: 18px;
+  display: flex;
+}
+
+.edit-form-img {
+  border-radius: 8px;
+  align-self: center;
+  max-width: 100%;
+  max-height: 200px;
+  margin-bottom: 8px;
+}
+
+.edit-form-folder-select {
+  margin: 12px 0;
+}
+
+
+/*# sourceMappingURL=src_components_EditForm_EditForm_53510cb3.css.map*/

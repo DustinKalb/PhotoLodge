@@ -1,0 +1,60 @@
+
+.navbar-root {
+	flex-grow: 1;
+}
+
+.navbar-appbar {
+	background-color: rgb(18, 18, 18) !important;
+	box-shadow: none !important;
+}
+
+.navbar-toolbar {
+	min-height: 56px;
+	display: flex;
+	align-items: center;
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+.navbar-logo {
+	margin-right: 12px;
+	border-radius: 6px;
+}
+
+.navbar-title {
+	color: #e3e3e3 !important;
+	margin-right: 16px;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	font-size: 1.35rem;
+	display: flex;
+	align-items: center;
+}
+.navbar-title-tan {
+	color: tan;
+}
+
+.navbar-search-container {
+	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+}
+.navbar-search-inner {
+	width: 400px;
+	max-width: 100%;
+}
+
+.navbar-username {
+	color: #e3e3e3;
+	margin-right: 8px;
+	font-size: 1rem;
+	font-weight: 500;
+	letter-spacing: 0.2px;
+}
+
+.navbar-account-btn {
+	margin-left: 2px;
+}
+.navbar-account-icon {
+	color: #e3e3e3 !important;
+}

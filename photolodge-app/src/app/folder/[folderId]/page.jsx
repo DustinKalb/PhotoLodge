@@ -1,7 +1,8 @@
 "use client";
+
 import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
-import ImageModal from "../../../components/ImageModal";
+import ImageModal from "../../../components/ImageModal/ImageModal";
 import IconButton from "@mui/material/IconButton";
 import DeleteRoundedIcon from "@mui/icons-material/DeleteRounded";
 import Dialog from "@mui/material/Dialog";
@@ -10,6 +11,7 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import Button from "@mui/material/Button";
+import './page.css';
 
 export default function FolderImagesPage() {
   const { folderId } = useParams();
@@ -63,11 +65,11 @@ export default function FolderImagesPage() {
   };
 
   return (
-    <div style={{ position: "relative" }}>
+    <div className="folder-page-root">
       {/* Trashcan icon in top right */}
       <IconButton
         onClick={() => setDialogOpen(true)}
-        style={{ position: "absolute", top: -11, left: 145, zIndex: 10, color: "tan" }}
+        className="folder-page-trash-btn"
         aria-label="Delete Folder"
       >
         <DeleteRoundedIcon />
@@ -98,18 +100,18 @@ export default function FolderImagesPage() {
           </Button>
         </DialogActions>
       </Dialog>
-      <h5 style={{ margin: "20px 5px", color: "#E3E3E3" }}>Images in this Folder</h5>
-      <div style={{ display: "flex", flexWrap: "wrap", gap: "16px" }}>
+      <h5 className="folder-page-title">Images in this Folder</h5>
+      <div className="folder-page-gallery">
         {images.map(img => (
           <div
             key={img._id}
-            style={{ width: "200px", height: "200px", overflow: "hidden", borderRadius: "8px", cursor: "pointer" }}
+            className="folder-page-image-card"
             onClick={() => handleImageClick(img)}
           >
             <img
               src={img.imageUrl}
               alt={img.title}
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              className="folder-page-image"
             />
           </div>
         ))}

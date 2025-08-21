@@ -1,0 +1,34 @@
+/* [project]/src/components/AllImagesGallery/AllImagesGallery.css [app-client] (css) */
+.all-images-header {
+  color: #e3e3e3;
+  margin: 20px 5px;
+}
+
+.all-images-gallery {
+  flex-wrap: wrap;
+  gap: 16px;
+  display: flex;
+}
+
+.all-images-gallery-item {
+  cursor: pointer;
+  border-radius: 8px;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.all-images-gallery-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.all-images-fab-container {
+  position: fixed;
+  bottom: 32px;
+  right: 50px;
+}
+
+
+/*# sourceMappingURL=src_components_AllImagesGallery_AllImagesGallery_1f439af9.css.map*/

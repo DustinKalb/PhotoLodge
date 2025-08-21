@@ -48,6 +48,16 @@ return (
         <br />
         <Button type="submit" variant="contained" style={{ width: 210}}>Login</Button>
       </div>
+      <div>
+        <br />
+        <Button
+          variant="outlined"
+          style={{ width: 210 }}
+          onClick={() => router.push('/sign-up')}
+        >
+          Sign Up
+        </Button>
+      </div>
     </form>
   );
 }
