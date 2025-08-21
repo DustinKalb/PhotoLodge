@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/app/folder/[folderId]/page.css"],"sourcesContent":["\r\n.folder-page-root {\r\n\tposition: relative;\r\n}\r\n\r\n.folder-page-trash-btn {\r\n\tposition: absolute !important;\r\n\ttop: -7px !important;\r\n\tleft: 190px !important;\r\n\tz-index: 10;\r\n\tcolor: tan !important;\r\n}\r\n\r\n.folder-page-title {\r\n\tmargin: 20px 5px;\r\n\tcolor: #E3E3E3;\r\n\tfont-size: 1.1rem;\r\n\tfont-weight: 600;\r\n}\r\n\r\n.folder-page-gallery {\r\n\tdisplay: flex;\r\n\tflex-wrap: wrap;\r\n\tgap: 16px;\r\n}\r\n\r\n.folder-page-image-card {\r\n\twidth: 200px;\r\n\theight: 200px;\r\n\toverflow: hidden;\r\n\tborder-radius: 8px;\r\n\tcursor: pointer;\r\n\tbox-shadow: 0 2px 8px rgba(0,0,0,0.08);\r\n\tbackground: #181818;\r\n\ttransition: box-shadow 0.15s, transform 0.15s;\r\n}\r\n.folder-page-image-card:hover {\r\n\tbox-shadow: 0 4px 16px rgba(210,180,140,0.18);\r\n\ttransform: translateY(-2px) scale(1.03);\r\n}\r\n\r\n.folder-page-image {\r\n\twidth: 100%;\r\n\theight: 100%;\r\n\tobject-fit: cover;\r\n\tdisplay: block;\r\n}\r\n"],"names":[],"mappings":"AACA;;;;AAIA;;;;;;;;AAQA;;;;;;;AAOA;;;;;;AAMA;;;;;;;;;;;AAUA;;;;;AAKA"}}]
+}

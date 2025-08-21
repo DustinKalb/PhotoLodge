@@ -1,0 +1,48 @@
+/* [project]/src/components/ImagePreview/ImagePreview.css [app-client] (css) */
+.image-preview-img {
+  border-radius: 8px;
+  max-width: 100%;
+  margin: 0 auto 12px;
+  display: block;
+  box-shadow: 0 2px 12px #00000014;
+}
+
+.image-preview-tags {
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0;
+  display: flex;
+}
+
+.image-preview-tag {
+  color: #e3e3e3;
+  letter-spacing: .2px;
+  background: #111;
+  border-radius: 6px;
+  margin-bottom: 2px;
+  margin-right: 2px;
+  padding: 2px 8px;
+  font-size: 13px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.image-preview-actions {
+  justify-content: center;
+  gap: 8px;
+  display: flex;
+}
+
+.image-preview-action-btn {
+  border-radius: 50%;
+  min-width: 36px;
+  padding: 6px 10px;
+  transition: background .15s;
+  color: tan !important;
+}
+
+.image-preview-action-btn:hover {
+  background: #f5f5dc33;
+}
+
+/*# sourceMappingURL=src_components_ImagePreview_ImagePreview_css_f9ee138c._.single.css.map*/

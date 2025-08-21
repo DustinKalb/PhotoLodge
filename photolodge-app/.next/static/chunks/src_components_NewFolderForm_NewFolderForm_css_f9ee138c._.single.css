@@ -1,0 +1,22 @@
+/* [project]/src/components/NewFolderForm/NewFolderForm.css [app-client] (css) */
+.new-folder-form {
+  flex-direction: column;
+  gap: 16px;
+  min-width: 260px;
+  max-width: 350px;
+  margin: 0 auto;
+  padding: 18px 0 0;
+  display: flex;
+}
+
+.new-folder-title {
+  color: "#e3e3e3";
+}
+
+.new-folder-actions {
+  justify-content: flex-end;
+  gap: 8px;
+  display: flex;
+}
+
+/*# sourceMappingURL=src_components_NewFolderForm_NewFolderForm_css_f9ee138c._.single.css.map*/

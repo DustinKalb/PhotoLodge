@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Dustin/Documents/IOD/PhotoLodge/photolodge-app/src/components/EditForm/EditForm.css"],"sourcesContent":["\r\n.edit-form {\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\tgap: 18px;\r\n}\r\n\r\n.edit-form-img {\r\n\tmax-width: 100%;\r\n\tmax-height: 200px;\r\n\tborder-radius: 8px;\r\n\tmargin-bottom: 8px;\r\n\talign-self: center;\r\n}\r\n\r\n.edit-form-folder-select {\r\n\tmargin: 12px 0;\r\n}\r\n"],"names":[],"mappings":"AACA;;;;;;AAMA;;;;;;;;AAQA","debugId":null}},
+    {"offset": {"line": 21, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Dustin/Documents/IOD/PhotoLodge/photolodge-app/src/components/AllImagesGallery/AllImagesGallery.css"],"sourcesContent":["\r\n.all-images-header {\r\n\tmargin: 20px 5px;\r\n\tcolor: #e3e3e3;\r\n}\r\n\r\n.all-images-gallery {\r\n\tdisplay: flex;\r\n\tflex-wrap: wrap;\r\n\tgap: 16px;\r\n}\r\n\r\n.all-images-gallery-item {\r\n\twidth: 200px;\r\n\theight: 200px;\r\n\toverflow: hidden;\r\n\tborder-radius: 8px;\r\n\tcursor: pointer;\r\n}\r\n\r\n.all-images-gallery-img {\r\n\twidth: 100%;\r\n\theight: 100%;\r\n\tobject-fit: cover;\r\n}\r\n\r\n.all-images-fab-container {\r\n\tposition: fixed;\r\n\tbottom: 32px;\r\n\tright: 50px;\r\n}\r\n"],"names":[],"mappings":"AACA;;;;;AAKA;;;;;;AAMA;;;;;;;;AAQA;;;;;;AAMA","debugId":null}}]
+}

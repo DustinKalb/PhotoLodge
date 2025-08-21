@@ -1,4 +1,4 @@
-import ImageGallery from "@/components/ImageGallery";
+import ImageGallery from "@/components/ImageGallery/ImageGallery";
 
 export const metadata = {
   title: "Home",

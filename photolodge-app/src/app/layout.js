@@ -1,10 +1,10 @@
 "use client"
 
 import { SearchProvider } from "../context/SearchContext.jsx";
-import NavBar from '../components/NavBar.jsx';
-import SideBar from "../components/SideBar.jsx";
-import MuiProvider from "../components/MuiProvider.jsx";
-import FloatingActionButton from "../components/FloatingActionButton.jsx";
+import NavBar from '../components/NavBar/NavBar.jsx';
+import SideBar from "../components/SideBar/SideBar.jsx";
+import MuiProvider from "../components/MuiProvider/MuiProvider.jsx";
+import FloatingActionButton from "../components/FloatingActionButton/FloatingActionButton.jsx";
 import './globals.css';
 import { Inter } from 'next/font/google';
 import { useState } from "react";

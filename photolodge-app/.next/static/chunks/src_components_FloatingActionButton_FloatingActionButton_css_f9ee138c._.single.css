@@ -1,0 +1,10 @@
+/* [project]/src/components/FloatingActionButton/FloatingActionButton.css [app-client] (css) */
+.fab-box > :not(style) {
+  margin: 8px;
+}
+
+.fab-tan {
+  background-color: tan !important;
+}
+
+/*# sourceMappingURL=src_components_FloatingActionButton_FloatingActionButton_css_f9ee138c._.single.css.map*/

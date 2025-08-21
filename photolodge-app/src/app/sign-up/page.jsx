@@ -47,26 +47,30 @@ export default function SignUpPage() {
         width={175}
         height={175}
       />
+      <br />
       <h1>Sign Up for PhotoLodge</h1>
+      <br />
       <TextField
         label="Username"
         variant="outlined"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
-        style={{ width: 210, margin: "8px 0" }}
+        style={{ width: 210 }}
       />
+      <br />
       <TextField
         label="Password"
         variant="outlined"
         type="password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
-        style={{ width: 210, margin: "8px 0" }}
+        style={{ width: 210 }}
       />
+      <br />
       <Button
         type="submit"
         variant="contained"
-        style={{ width: 210, margin: "8px 0" }}
+        style={{ width: 210 }}
       >
         Sign Up
       </Button>

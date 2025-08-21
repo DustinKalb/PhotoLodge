@@ -1,0 +1,43 @@
+/* [project]/src/components/SideBar/SideBar.css [app-client] (css) */
+.sidebar-root {
+  color: #fff;
+  background: #121212;
+  width: 220px;
+  height: 75vh;
+  padding: 24px 0;
+}
+
+.sidebar-links {
+  flex-direction: column;
+  gap: 12px;
+  display: flex;
+}
+
+.sidebar-btn {
+  transition: background .15s, color .15s;
+  text-transform: none !important;
+  color: #e3e3e3 !important;
+  background: none !important;
+  border-radius: 16px !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  gap: 8px !important;
+  width: 90% !important;
+  margin: 0 auto !important;
+  padding: 12px 20px !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  display: flex !important;
+}
+
+.sidebar-btn:hover {
+  color: #fff !important;
+  background: #d2b48c2e !important;
+}
+
+.sidebar-btn-active {
+  color: #fff !important;
+  background: #d2b48c80 !important;
+}
+
+/*# sourceMappingURL=src_components_SideBar_SideBar_css_f9ee138c._.single.css.map*/

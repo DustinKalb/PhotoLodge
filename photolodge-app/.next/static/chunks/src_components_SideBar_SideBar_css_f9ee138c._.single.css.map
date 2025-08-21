@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/components/SideBar/SideBar.css"],"sourcesContent":["\r\n.sidebar-root {\r\n\twidth: 220px;\r\n\tbackground: rgb(18,18,18);\r\n\tcolor: #fff;\r\n\tpadding: 24px 0;\r\n\theight: 75vh;\r\n}\r\n\r\n.sidebar-links {\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\tgap: 12px;\r\n}\r\n\r\n.sidebar-btn {\r\n\tjustify-content: flex-start !important;\r\n\ttext-transform: none !important;\r\n\tdisplay: flex !important;\r\n\talign-items: center !important;\r\n\tgap: 8px !important;\r\n\tpadding: 12px 20px !important;\r\n\tbackground: transparent !important;\r\n\tcolor: #e3e3e3 !important;\r\n\tborder-radius: 16px !important;\r\n\tfont-weight: 500 !important;\r\n\tfont-size: 16px !important;\r\n\twidth: 90% !important;\r\n\tmargin: 0 auto !important;\r\n\ttransition: background 0.15s, color 0.15s;\r\n}\r\n.sidebar-btn:hover {\r\n\tbackground: rgba(210,180,140,0.18) !important;\r\n\tcolor: #fff !important;\r\n}\r\n.sidebar-btn-active {\r\n\tbackground: rgba(210,180,140,0.5) !important;\r\n\tcolor: #fff !important;\r\n}\r\n"],"names":[],"mappings":"AACA;;;;;;;;AAQA;;;;;;AAMA;;;;;;;;;;;;;;;;;AAgBA;;;;;AAIA"}}]
+}

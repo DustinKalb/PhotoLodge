@@ -1,0 +1,15 @@
+
+.image-modal-box {
+	background: #222;
+	color: #fff;
+	padding: 32px;
+	border-radius: 16px;
+	max-width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 80px;
+	outline: none;
+}
+.image-modal-box:focus {
+	outline: none;
+}

@@ -1,0 +1,45 @@
+
+.image-preview-img {
+	max-width: 100%;
+	display: block;
+	margin: 0 auto 12px auto;
+	border-radius: 8px;
+	box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.image-preview-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	margin: 8px 0;
+}
+
+.image-preview-tag {
+	background: #111;
+	color: #e3e3e3;
+	border-radius: 6px;
+	padding: 2px 8px;
+	font-size: 13px;
+	font-weight: 500;
+	margin-right: 2px;
+	margin-bottom: 2px;
+	display: inline-block;
+	letter-spacing: 0.2px;
+}
+
+.image-preview-actions {
+	display: flex;
+	justify-content: center;
+	gap: 8px;
+}
+
+.image-preview-action-btn {
+	color: tan !important;
+	min-width: 36px;
+	padding: 6px 10px;
+	border-radius: 50%;
+	transition: background 0.15s;
+}
+.image-preview-action-btn:hover {
+	background: #f5f5dc33;
+}

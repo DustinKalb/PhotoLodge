@@ -1,0 +1,65 @@
+/* [project]/src/components/NavBar/NavBar.css [app-client] (css) */
+.navbar-root {
+  flex-grow: 1;
+}
+
+.navbar-appbar {
+  box-shadow: none !important;
+  background-color: #121212 !important;
+}
+
+.navbar-toolbar {
+  align-items: center;
+  min-height: 56px;
+  padding-left: 12px;
+  padding-right: 12px;
+  display: flex;
+}
+
+.navbar-logo {
+  border-radius: 6px;
+  margin-right: 12px;
+}
+
+.navbar-title {
+  letter-spacing: .5px;
+  align-items: center;
+  margin-right: 16px;
+  font-size: 1.35rem;
+  font-weight: 700;
+  display: flex;
+  color: #e3e3e3 !important;
+}
+
+.navbar-title-tan {
+  color: tan;
+}
+
+.navbar-search-container {
+  flex-grow: 1;
+  justify-content: center;
+  display: flex;
+}
+
+.navbar-search-inner {
+  width: 400px;
+  max-width: 100%;
+}
+
+.navbar-username {
+  color: #e3e3e3;
+  letter-spacing: .2px;
+  margin-right: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.navbar-account-btn {
+  margin-left: 2px;
+}
+
+.navbar-account-icon {
+  color: #e3e3e3 !important;
+}
+
+/*# sourceMappingURL=src_components_NavBar_NavBar_css_f9ee138c._.single.css.map*/

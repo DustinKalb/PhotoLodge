@@ -1,15 +1,17 @@
 "use client";
+
 import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
-import ImageModal from "../../../components/ImageModal";
+import ImageModal from "../../../components/ImageModal/ImageModal";
 import IconButton from "@mui/material/IconButton";
-import DeleteOutlineRoundedIcon from "@mui/icons-material/DeleteOutlineRounded";
+import DeleteRoundedIcon from "@mui/icons-material/DeleteRounded";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import Button from "@mui/material/Button";
+import './page.css';
 
 export default function FolderImagesPage() {
   const { folderId } = useParams();
@@ -63,14 +65,14 @@ export default function FolderImagesPage() {
   };
 
   return (
-    <div style={{ position: "relative" }}>
+    <div className="folder-page-root">
       {/* Trashcan icon in top right */}
       <IconButton
         onClick={() => setDialogOpen(true)}
-        style={{ position: "absolute", top: 8, right: 8, zIndex: 10, color: "#b71c1c" }}
+        className="folder-page-trash-btn"
         aria-label="Delete Folder"
       >
-        <DeleteOutlineRoundedIcon fontSize="large" />
+        <DeleteRoundedIcon />
       </IconButton>
       <Dialog
         open={dialogOpen}
@@ -98,16 +100,20 @@ export default function FolderImagesPage() {
           </Button>
         </DialogActions>
       </Dialog>
-      <h2>Images in this Folder</h2>
-      <div style={{ display: "flex", flexWrap: "wrap", gap: "16px" }}>
+      <h5 className="folder-page-title">Images in this Folder</h5>
+      <div className="folder-page-gallery">
         {images.map(img => (
-          <img
+          <div
             key={img._id}
-            src={img.imageUrl}
-            alt={img.title}
-            style={{ width: 200, height: 200, objectFit: "cover", cursor: "pointer" }}
+            className="folder-page-image-card"
             onClick={() => handleImageClick(img)}
-          />
+          >
+            <img
+              src={img.imageUrl}
+              alt={img.title}
+              className="folder-page-image"
+            />
+          </div>
         ))}
       </div>
       <ImageModal
