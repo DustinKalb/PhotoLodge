@@ -1,14 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-const apiBase = process.env.NEXT_PUBLIC_API_URL;
-import { useSearch } from "../../context/SearchContext.jsx";
-import ImageModal from "../ImageModal/ImageModal.jsx";
-import FloatingActionButton from "../FloatingActionButton/FloatingActionButton.jsx";
+import { useSearch } from "../context/SearchContext.jsx";
+import ImageModal from "./ImageModal";
+import FloatingActionButton from "./FloatingActionButton.jsx";
 import FolderRoundedIcon from "@mui/icons-material/FolderRounded";
 import AddIcon from "@mui/icons-material/Add";
 import Link from "next/link";
-import "./ImageGallery.css";
 
 export default function ImageGallery() {
   const [images, setImages] = useState([]);
@@ -22,6 +20,7 @@ export default function ImageGallery() {
   const fetchImages = () => {
     const userId = localStorage.getItem("userId");
     if (!userId) return;
+  const apiBase = process.env.NEXT_PUBLIC_API_URL;
   fetch(`${apiBase}/api/posts/user/${userId}`)
       .then(res => res.json())
       .then(data => {
@@ -77,71 +76,80 @@ export default function ImageGallery() {
   return (
     <>
       {/* Folders section */}
-      <div className="gallery-folders-header">
-        <h5>Folders</h5>
+      <div style={{ margin: "20px 5px 0 5px", color: "tan", display: "flex", alignItems: "center" }}>
+        <h5 style={{ margin: 0, marginRight: 12 }}>Folders</h5>
         <button
           onClick={handleNewFolderClick}
-          className="gallery-add-folder-btn"
+          style={{
+            width: 20,
+            height: 20,
+            borderRadius: "50%",
+            border: "none",
+            background: "tan",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            marginLeft: 4,
+            cursor: "pointer",
+            padding: 0,
+          }}
           aria-label="Add Folder"
         >
-          <AddIcon className="gallery-add-folder-icon" />
+          <AddIcon style={{ color: "black", fontSize: 15 }} />
         </button>
       </div>
       <br/>
       {/* Folder icons row */}
-      <div className="gallery-folders-row">
+      <div style={{ display: "flex", alignItems: "center" }}>
         {folders.map(folder => (
-          <Link key={folder._id} href={`/folder/${folder._id}`} className="gallery-folder-link">
-            <div className="gallery-folder-item">
-              <FolderRoundedIcon className="gallery-folder-icon" />
-              <span className="gallery-folder-name">{folder.name}</span>
+          <Link key={folder._id} href={`/folder/${folder._id}`} style={{ textDecoration: "none" }}>
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", margin: "0 16px", cursor: "pointer" }}>
+              <FolderRoundedIcon style={{ color: "white", fontSize: 64, marginBottom: 4 }} />
+              <span style={{ color: "white", fontWeight: 500, fontSize: 14, lineHeight: 1.2 }}>{folder.name}</span>
             </div>
           </Link>
         ))}
       </div>
       <br/>
-  <hr className="gallery-divider" />
       {/* Untagged images section */}
       {untaggedImages.length > 0 && (
         <>
-          <div className="gallery-section-header">
+          <div style={{ margin: "20px 5px", color: "tan" }}>
             <h5>Untagged</h5>
           </div>
-          <div className="gallery-images-row">
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "16px" }}>
             {untaggedImages.map((img) => (
               <div
                 key={img._id}
-                className="gallery-image-item"
+                style={{ width: "200px", height: "200px", overflow: "hidden", borderRadius: "8px", cursor: "pointer" }}
                 onClick={() => handleImageClick(img)}
               >
                 <img
                   src={img.imageUrl}
                   alt={img.title}
-                  className="gallery-image-img"
+                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 />
               </div>
             ))}
           </div>
-          <br/>
-          <hr className="gallery-divider" />
         </>
       )}
 
       {/* Tagged images section */}
-      <div className="gallery-section-header">
+      <div style={{ margin: "20px 5px", color: "tan"}}>
         <h5>Tagged</h5>
       </div>
-      <div className="gallery-images-row">
+      <div style={{ display: "flex", flexWrap: "wrap", gap: "16px" }}>
         {taggedImages.map((img) => (
           <div
             key={img._id}
-            className="gallery-image-item"
+            style={{ width: "200px", height: "200px", overflow: "hidden", borderRadius: "8px", cursor: "pointer" }}
             onClick={() => handleImageClick(img)}
           >
             <img
               src={img.imageUrl}
               alt={img.title}
-              className="gallery-image-img"
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
           </div>
         ))}
@@ -160,22 +168,9 @@ export default function ImageGallery() {
           setModalOpen(false);
         }}
       />
-      <div className="gallery-fab-container">
+      <div style={{ position: "fixed", bottom: 32, right: 32 }}>
         <FloatingActionButton onClick={handleUploadClick} />
       </div>
     </>
   );
-}
-
-
-// Simple unit test for folder extraction
-if (typeof window === 'undefined') {
-  const folders = [
-    { _id: '1', name: 'Vacation' },
-    { _id: '2', name: 'Work' },
-  ];
-  const folderNames = folders.map(f => f.name);
-  if (folderNames.length !== 2 || folderNames[0] !== 'Vacation' || folderNames[1] !== 'Work') {
-    throw new Error('ImageGallery folder extraction unit test failed');
-  }
 }
