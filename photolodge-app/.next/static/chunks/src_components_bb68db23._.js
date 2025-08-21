@@ -998,6 +998,10 @@ _s(AllImagesGallery, "Z0HN5YnSgSwlFUFKdY6LALgAYGU=", false, function() {
     ];
 });
 _c = AllImagesGallery;
+// Simple unit test for filter logic
+if ("TURBOPACK compile-time falsy", 0) {
+    "TURBOPACK unreachable";
+}
 var _c;
 __turbopack_context__.k.register(_c, "AllImagesGallery");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {

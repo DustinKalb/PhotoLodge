@@ -1160,6 +1160,10 @@ _s(ImageGallery, "04Q+PNPMX6pkE63WPQcVdzLiQeQ=", false, function() {
     ];
 });
 _c = ImageGallery;
+// Simple unit test for folder extraction
+if ("TURBOPACK compile-time falsy", 0) {
+    "TURBOPACK unreachable";
+}
 var _c;
 __turbopack_context__.k.register(_c, "ImageGallery");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
