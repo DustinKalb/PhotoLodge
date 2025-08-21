@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import ImageModal from "../../../components/ImageModal";
 import IconButton from "@mui/material/IconButton";
-import DeleteOutlineRoundedIcon from "@mui/icons-material/DeleteOutlineRounded";
+import DeleteRoundedIcon from "@mui/icons-material/DeleteRounded";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
@@ -67,10 +67,10 @@ export default function FolderImagesPage() {
       {/* Trashcan icon in top right */}
       <IconButton
         onClick={() => setDialogOpen(true)}
-        style={{ position: "absolute", top: 8, right: 8, zIndex: 10, color: "#b71c1c" }}
+        style={{ position: "absolute", top: -11, left: 145, zIndex: 10, color: "tan" }}
         aria-label="Delete Folder"
       >
-        <DeleteOutlineRoundedIcon fontSize="large" />
+        <DeleteRoundedIcon />
       </IconButton>
       <Dialog
         open={dialogOpen}
@@ -98,16 +98,20 @@ export default function FolderImagesPage() {
           </Button>
         </DialogActions>
       </Dialog>
-      <h2>Images in this Folder</h2>
+      <h5 style={{ margin: "20px 5px", color: "#E3E3E3" }}>Images in this Folder</h5>
       <div style={{ display: "flex", flexWrap: "wrap", gap: "16px" }}>
         {images.map(img => (
-          <img
+          <div
             key={img._id}
-            src={img.imageUrl}
-            alt={img.title}
-            style={{ width: 200, height: 200, objectFit: "cover", cursor: "pointer" }}
+            style={{ width: "200px", height: "200px", overflow: "hidden", borderRadius: "8px", cursor: "pointer" }}
             onClick={() => handleImageClick(img)}
-          />
+          >
+            <img
+              src={img.imageUrl}
+              alt={img.title}
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            />
+          </div>
         ))}
       </div>
       <ImageModal

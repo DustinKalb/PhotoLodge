@@ -15,7 +15,19 @@ export default function ImageModal({ open, mode: initialMode = "preview", image,
 
   return (
     <Modal open={open} onClose={onClose}>
-      <Box sx={{ background: "#222", color: "#fff", p: 4, borderRadius: 2, maxWidth: 500, mx: "auto", mt: 10 }}>
+      <Box
+        sx={{
+          background: "#222",
+          color: "#fff",
+          p: 4,
+          borderRadius: 2,
+          maxWidth: 500,
+          mx: "auto",
+          mt: 10,
+          outline: "none",
+          "&:focus": { outline: "none" }
+        }}
+      >
         {/* Debug line, optional: */}
         {/* <div>Current mode: {mode}</div> */}
         {mode === "preview" && image && (

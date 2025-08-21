@@ -1,49 +1,70 @@
 "use client";
-
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import Divider from '@mui/material/Divider';
-import HomeIcon from '@mui/icons-material/HomeRounded';
-import BurstModeIcon from '@mui/icons-material/BurstModeRounded';
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import HomeIcon from '@mui/icons-material/HomeRounded';
+import BurstModeIcon from '@mui/icons-material/BurstModeRounded';
+import Button from "@mui/material/Button";
 
-{/* This is my sidebar component, very simple, uses Material UI with some minor styling changes */}
-export default function BasicList() {
-    const path = usePathname();
+export default function SideBar() {
+  const path = usePathname();
   return (
-    <Box sx={{ width: '100%', maxWidth: 260, bgcolor: 'background.paper' }}>
-      <nav aria-label="main mailbox folders">
-        <List>
-          <ListItem disablePadding>
-            <ListItemButton
-            component={Link}
-            href="/"
-            selected={path === "/"}>
-              <ListItemIcon>
-                <HomeIcon />
-              </ListItemIcon>
-             <ListItemText primary="Home"/>
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton
-            component={Link}
-            href="/all-files"
-            selected={path.startsWith("/all-files")}>
-              <ListItemIcon>
-                <BurstModeIcon />
-              </ListItemIcon>
-              <ListItemText primary="All Files" />
-            </ListItemButton>
-          </ListItem>
-        </List>
+    <div style={{
+      width: 220,
+      background: "rgb(18,18,18)",
+      color: "#fff",
+      padding: "24px 0",
+      height: "75vh",
+    }}>
+      <nav>
+        <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+          <Link href="/" passHref>
+            <Button
+              fullWidth
+              startIcon={<HomeIcon />}
+              sx={{
+                justifyContent: 'flex-start',
+                textTransform: 'none',
+                display: 'flex',
+                alignItems: 'center',
+                gap: 1,
+                padding: '12px 20px',
+                background: path === '/' ? 'rgba(210,180,140,0.5)' : 'transparent',
+                color: path === '/' ? 'white' : '#e3e3e3',
+                borderRadius: 2,
+                fontWeight: 500,
+                fontSize: 16,
+                width: '90%',
+                margin: '0 auto',
+              }}
+            >
+              Home
+            </Button>
+          </Link>
+          <Link href="/all-files" passHref>
+            <Button
+              fullWidth
+              startIcon={<BurstModeIcon />}
+              sx={{
+                justifyContent: 'flex-start',
+                textTransform: 'none',
+                display: 'flex',
+                alignItems: 'center',
+                gap: 1,
+                padding: '12px 20px',
+                background: path.startsWith('/all-files') ? 'rgba(210,180,140,0.5)' : 'transparent',
+                color: path.startsWith('/all-files') ? 'white' : '#e3e3e3',
+                borderRadius: 2,
+                fontWeight: 500,
+                fontSize: 16,
+                width: '90%',
+                margin: '0 auto',
+              }}
+            >
+              All Files
+            </Button>
+          </Link>
+        </div>
       </nav>
-    </Box>
+    </div>
   );
 }

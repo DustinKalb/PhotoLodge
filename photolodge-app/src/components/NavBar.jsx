@@ -46,21 +46,21 @@ function NavBar() {
           <img
             src="/images/photolodgelogo.png"
             alt="PhotoLodge Logo"
-            width={30}
-            height={30}
+            width={40}
+            height={40}
             style={{ marginRight: 12 }}
           />
-          <Typography variant="h6" component="div" sx={{ mr: 2 }}>
-            Photo<span style={{ color: "tan", fontStyle: "italic" }}>Lodge</span>
+          <Typography variant="h6" component="div" color="#e3e3e3" sx={{ mr: 2 }}>
+            Photo<span style={{ color: "tan" }}>Lodge</span>
           </Typography>
           <Box sx={{ flexGrow: 1, display: "flex", justifyContent: "center" }}>
             <Box sx={{ width: 400, maxWidth: "100%" }}>
               <SearchBar value={search} onChange={setSearch} />
             </Box>
           </Box>
-          <span>{username}</span>
-          <IconButton color="inherit" onClick={handleMenuOpen}>
-            <AccountCircleRoundedIcon fontSize="large" />
+          <span style={{ color: "#e3e3e3" }}>{username}</span>
+          <IconButton onClick={handleMenuOpen}>
+            <AccountCircleRoundedIcon fontSize="large" style={{ color: "e3e3e3"}} />
           </IconButton>
           <Menu
             anchorEl={anchorEl}

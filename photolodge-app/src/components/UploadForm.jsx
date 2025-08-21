@@ -5,16 +5,28 @@ import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
 
 export default function UploadForm({ onSave, onClose }) {
   const [file, setFile] = useState(null);
+  const [previewUrl, setPreviewUrl] = useState(null);
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [tags, setTags] = useState("");
   const [loading, setLoading] = useState(false);
   const [folders, setFolders] = useState([]);
   const [selectedFolder, setSelectedFolder] = useState("");
-
+  // Show image preview when file changes
+  useEffect(() => {
+    if (!file) {
+      setPreviewUrl(null);
+      return;
+    }
+    const url = URL.createObjectURL(file);
+    setPreviewUrl(url);
+    return () => URL.revokeObjectURL(url);
+  }, [file]);
   useEffect(() => {
     const userId = localStorage.getItem("userId");
     fetch(`http://localhost:8080/api/folders/user/${userId}`)
@@ -80,26 +92,53 @@ export default function UploadForm({ onSave, onClose }) {
   }
 
   return (
-    <form onSubmit={savePost}>
-      <div>
-        <label>Image File:</label>
-        <input type="file" accept="image/*" onChange={e => setFile(e.target.files[0])} required />
-      </div>
-      <div>
-        <label>Name:</label>
-        <input value={name} onChange={e => setName(e.target.value)} required
-        style={{ backgroundColor: "white", color: "black", borderColor: "gray", borderRadius: "5px" }} />
-      </div>
-      <div>
-        <label>Description:</label>
-        <textarea value={description} onChange={e => setDescription(e.target.value)}
-        style={{ backgroundColor: "white", color: "black", borderColor: "gray", borderRadius: "5px", borderWidth: "2px" }} />
-      </div>
-      <div>
-        <label>Tags (comma separated):</label>
-        <input value={tags} onChange={e => setTags(e.target.value)}
-        style={{ backgroundColor: "white", color: "black", borderColor: "gray", borderRadius: "5px" }} />
-      </div>
+    <form onSubmit={savePost} style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
+      <h2 style={{ textAlign: 'center' }}>Upload New Image</h2>
+      {previewUrl && (
+        <img
+          src={previewUrl}
+          alt="Preview"
+          style={{ maxWidth: '100%', maxHeight: 200, borderRadius: 8, marginBottom: 8, alignSelf: 'center' }}
+        />
+      )}
+      <Button
+        variant="outlined"
+        component="label"
+        sx={{ alignSelf: 'center', mt: 1, mb: 1 }}
+      >
+        Upload Image File
+        <input
+          type="file"
+          accept="image/*"
+          hidden
+          onChange={e => setFile(e.target.files[0])}
+          required
+        />
+      </Button>
+      <TextField
+        label="Name"
+        value={name}
+        onChange={e => setName(e.target.value)}
+        required
+        variant="outlined"
+        fullWidth
+      />
+      <TextField
+        label="Description"
+        value={description}
+        onChange={e => setDescription(e.target.value)}
+        multiline
+        minRows={2}
+        variant="outlined"
+        fullWidth
+      />
+      <TextField
+        label="Tags (comma separated)"
+        value={tags}
+        onChange={e => setTags(e.target.value)}
+        variant="outlined"
+        fullWidth
+      />
       <FormControl fullWidth style={{ margin: "12px 0" }}>
         <InputLabel id="folder-select-label">Folder</InputLabel>
         <Select
@@ -115,7 +154,9 @@ export default function UploadForm({ onSave, onClose }) {
           ))}
         </Select>
       </FormControl>
-      <button type="submit" disabled={loading}>{loading ? "Uploading..." : "Save"}</button>
+      <Button type="submit" variant="contained" color="primary" disabled={loading}>
+        {loading ? "Uploading..." : "Save"}
+      </Button>
     </form>
   );
 }

@@ -52,7 +52,7 @@ export default function AllImagesGallery() {
 
   return (
     <>
-      <div style={{ margin: "20px 5px", color: "tan"}}>
+      <div style={{ margin: "20px 5px", color: "#e3e3e3"}}>
         <h5>All Files</h5>
       </div>
       <div style={{ display: "flex", flexWrap: "wrap", gap: "16px" }}>
@@ -84,7 +84,7 @@ export default function AllImagesGallery() {
           setModalOpen(false);
         }}
       />
-      <div style={{ position: "fixed", bottom: 32, right: 32 }}>
+  <div style={{ position: "fixed", bottom: 32, right: 50 }}>
         <FloatingActionButton onClick={handleUploadClick} />
       </div>
     </>

@@ -20,14 +20,31 @@ export default function ImagePreview({ image, onClose, onEdit, onDelete }) {
 
   return (
     <div>
-      <img src={image.imageUrl} alt={image.title} style={{ maxWidth: "100%" }} />
+  <img src={image.imageUrl} alt={image.title} style={{ maxWidth: "100%" }} tabIndex={-1} />
       <h2>{image.title}</h2>
-      <p>{image.description}</p>
-      <div>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, margin: '8px 0' }}>
         {image.tags?.map((tag, i) => (
-          <span key={tag + i}>#{tag} </span>
+          <span
+            key={tag + i}
+            style={{
+              background: '#111',
+              color: '#e3e3e3',
+              borderRadius: 6,
+              padding: '2px 8px',
+              fontSize: 13,
+              fontWeight: 500,
+              marginRight: 2,
+              marginBottom: 2,
+              display: 'inline-block',
+              letterSpacing: 0.2
+            }}
+          >
+            #{tag}
+          </span>
         ))}
       </div>
+      <p>{image.description}</p>
+      <br/>
       <div style={{display: "flex", justifyContent: "center"}}>
         <Button onClick={onEdit} style={{color: "tan"}}>
           <EditRoundedIcon />

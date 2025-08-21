@@ -3,6 +3,8 @@ import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
 
 export default function EditForm({ post, onSave, onClose }) {
   const [title, setTitle] = useState(post.title);
@@ -38,26 +40,36 @@ export default function EditForm({ post, onSave, onClose }) {
   }
 
   return (
-    <form onSubmit={handleEdit}>
-      <div style={{ textAlign: "center", marginBottom: "16px" }}>
-        <img
-          src={post.imageUrl}
-          alt={post.title}
-          style={{ maxWidth: "100%" }}
-        />
-      </div>
-      <div>
-        <label>Title:</label>
-        <input value={title} onChange={e => setTitle(e.target.value)} required />
-      </div>
-      <div>
-        <label>Description:</label>
-        <textarea value={description} onChange={e => setDescription(e.target.value)} />
-      </div>
-      <div>
-        <label>Tags (comma separated):</label>
-        <input value={tags} onChange={e => setTags(e.target.value)} />
-      </div>
+    <form onSubmit={handleEdit} style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
+      <img
+        src={post.imageUrl}
+        alt={post.title}
+        style={{ maxWidth: '100%', maxHeight: 200, borderRadius: 8, marginBottom: 8, alignSelf: 'center' }}
+      />
+      <TextField
+        label="Title"
+        value={title}
+        onChange={e => setTitle(e.target.value)}
+        required
+        variant="outlined"
+        fullWidth
+      />
+      <TextField
+        label="Description"
+        value={description}
+        onChange={e => setDescription(e.target.value)}
+        multiline
+        minRows={2}
+        variant="outlined"
+        fullWidth
+      />
+      <TextField
+        label="Tags (comma separated)"
+        value={tags}
+        onChange={e => setTags(e.target.value)}
+        variant="outlined"
+        fullWidth
+      />
       <FormControl fullWidth style={{ margin: "12px 0" }}>
         <InputLabel id="folder-select-label">Folder</InputLabel>
         <Select
@@ -76,7 +88,9 @@ export default function EditForm({ post, onSave, onClose }) {
           ))}
         </Select>
       </FormControl>
-      <button type="submit">Save Changes</button>
+      <Button type="submit" variant="contained" color="primary">
+        Save Changes
+      </Button>
     </form>
   );
 }

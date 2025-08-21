@@ -75,8 +75,8 @@ export default function ImageGallery() {
   return (
     <>
       {/* Folders section */}
-      <div style={{ margin: "20px 5px 0 5px", color: "tan", display: "flex", alignItems: "center" }}>
-        <h5 style={{ margin: 0, marginRight: 12 }}>Folders</h5>
+      <div style={{ margin: "20px 5px 0 5px", display: "flex", alignItems: "center" }}>
+        <h5 style={{ margin: 0, marginRight: 12, color: "#e3e3e3" }}>Folders</h5>
         <button
           onClick={handleNewFolderClick}
           style={{
@@ -103,17 +103,18 @@ export default function ImageGallery() {
         {folders.map(folder => (
           <Link key={folder._id} href={`/folder/${folder._id}`} style={{ textDecoration: "none" }}>
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", margin: "0 16px", cursor: "pointer" }}>
-              <FolderRoundedIcon style={{ color: "white", fontSize: 64, marginBottom: 4 }} />
-              <span style={{ color: "white", fontWeight: 500, fontSize: 14, lineHeight: 1.2 }}>{folder.name}</span>
+              <FolderRoundedIcon style={{ color: "#e3e3e3", fontSize: 64, marginBottom: 4 }} />
+              <span style={{ color: "#e3e3e3", fontWeight: 500, fontSize: 14, lineHeight: 1.2 }}>{folder.name}</span>
             </div>
           </Link>
         ))}
       </div>
       <br/>
+      <hr style={{ border: 'none', borderTop: '1px solid #444', margin: '16px 0' }} />
       {/* Untagged images section */}
       {untaggedImages.length > 0 && (
         <>
-          <div style={{ margin: "20px 5px", color: "tan" }}>
+          <div style={{ margin: "20px 5px", color: "#e3e3e3" }}>
             <h5>Untagged</h5>
           </div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "16px" }}>
@@ -131,11 +132,13 @@ export default function ImageGallery() {
               </div>
             ))}
           </div>
+          <br/>
+          <hr style={{ border: 'none', borderTop: '1px solid #444', margin: '16px 0' }} />
         </>
       )}
 
       {/* Tagged images section */}
-      <div style={{ margin: "20px 5px", color: "tan"}}>
+      <div style={{ margin: "20px 5px", color: "#e3e3e3"}}>
         <h5>Tagged</h5>
       </div>
       <div style={{ display: "flex", flexWrap: "wrap", gap: "16px" }}>
@@ -167,7 +170,7 @@ export default function ImageGallery() {
           setModalOpen(false);
         }}
       />
-      <div style={{ position: "fixed", bottom: 32, right: 32 }}>
+      <div style={{ position: "fixed", bottom: 32, right: 50 }}>
         <FloatingActionButton onClick={handleUploadClick} />
       </div>
     </>
