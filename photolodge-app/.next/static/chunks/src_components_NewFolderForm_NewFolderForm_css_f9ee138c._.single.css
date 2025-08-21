@@ -10,11 +10,7 @@
 }
 
 .new-folder-title {
-  text-align: center;
-  color: #222;
-  margin-bottom: 0;
-  font-size: 1.3rem;
-  font-weight: 600;
+  color: "#e3e3e3";
 }
 
 .new-folder-actions {
