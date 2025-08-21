@@ -2,7 +2,7 @@
 
 const Mongoose = require('mongoose');
 
-const uri = process.env.DB_URI || "mongodb://localhost:27017/photolodge_db";
+const uri = process.env.DB_URI
 
 Mongoose.connect(uri)
     .then(() => console.log('MongoDB Connected'))
