@@ -14,18 +14,18 @@ export default function EditForm({ post, onSave, onClose }) {
   const [folders, setFolders] = useState([]);
   const [selectedFolder, setSelectedFolder] = useState(post.folderId || "");
 
+  const apiBase = process.env.NEXT_PUBLIC_API_URL;
   useEffect(() => {
     const userId = localStorage.getItem("userId");
-    fetch(`http://localhost:8080/api/folders/user/${userId}`)
+    fetch(`${apiBase}/api/folders/user/${userId}`)
       .then(res => res.json())
       .then(data => setFolders(data.data || []));
-  }, []);
+  }, [apiBase]);
 
   async function handleEdit(e) {
     e.preventDefault();
     const tagsArray = tags.split(",").map(tag => tag.trim()).filter(Boolean);
-
-    await fetch(`http://localhost:8080/api/posts/${post._id}`, {
+    await fetch(`${apiBase}/api/posts/${post._id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -35,7 +35,6 @@ export default function EditForm({ post, onSave, onClose }) {
         folderId: selectedFolder || null,
       }),
     });
-
     if (onSave) onSave();
     if (onClose) onClose();
   }

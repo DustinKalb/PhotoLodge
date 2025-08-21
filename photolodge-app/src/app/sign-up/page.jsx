@@ -16,7 +16,8 @@ export default function SignUpPage() {
     e.preventDefault();
     setError("");
     setSuccess("");
-    const res = await fetch("http://localhost:8080/api/users/create", {
+  const apiBase = process.env.NEXT_PUBLIC_API_URL;
+  const res = await fetch(`${apiBase}/api/users/create`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, password }),

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+const apiBase = process.env.NEXT_PUBLIC_API_URL;
 import { useSearch } from "../../context/SearchContext.jsx";
 import ImageModal from "../ImageModal/ImageModal.jsx";
 import FloatingActionButton from "../FloatingActionButton/FloatingActionButton.jsx";
@@ -17,7 +18,7 @@ export default function AllImagesGallery() {
   const fetchImages = () => {
     const userId = localStorage.getItem("userId");
     if (!userId) return;
-    fetch(`http://localhost:8080/api/posts/user/${userId}?t=${Date.now()}`)
+  fetch(`${apiBase}/api/posts/user/${userId}?t=${Date.now()}`)
       .then(res => res.json())
       .then(data => {
         setImages(data.data);

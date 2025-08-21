@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+const apiBase = process.env.NEXT_PUBLIC_API_URL;
 import { useParams, useRouter } from "next/navigation";
 import ImageModal from "../../../components/ImageModal/ImageModal";
 import IconButton from "@mui/material/IconButton";
@@ -23,7 +24,7 @@ export default function FolderImagesPage() {
   const [dialogOpen, setDialogOpen] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:8080/api/posts/folder/${folderId}`)
+  fetch(`${apiBase}/api/posts/folder/${folderId}`)
       .then(res => res.json())
       .then(data => setImages(data.data || []));
   }, [folderId]);
@@ -41,7 +42,7 @@ export default function FolderImagesPage() {
   const handleDelete = async () => {
     if (!selectedImage) return;
     if (!window.confirm("Are you sure you want to delete this image?")) return;
-    await fetch(`http://localhost:8080/api/posts/${selectedImage._id}`, {
+    await fetch(`${apiBase}/api/posts/${selectedImage._id}`, {
       method: "DELETE",
     });
     setImages(images.filter(img => img._id !== selectedImage._id));
@@ -50,7 +51,7 @@ export default function FolderImagesPage() {
 
   const handleSave = () => {
     // After editing, refresh images
-    fetch(`http://localhost:8080/api/posts/folder/${folderId}`)
+  fetch(`${apiBase}/api/posts/folder/${folderId}`)
       .then(res => res.json())
       .then(data => setImages(data.data || []));
     setModalOpen(false);
@@ -58,7 +59,7 @@ export default function FolderImagesPage() {
 
   // Delete the folder
   const handleDeleteFolder = async () => {
-    await fetch(`http://localhost:8080/api/folders/${folderId}`, {
+    await fetch(`${apiBase}/api/folders/${folderId}`, {
       method: "DELETE",
     });
     router.push("/");
