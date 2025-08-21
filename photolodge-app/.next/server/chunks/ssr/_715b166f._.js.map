@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 23, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/app/page.module.css [app-rsc] (css module)"],"sourcesContent":["__turbopack_context__.v({\n  \"ctas\": \"page-module___8aEwW__ctas\",\n  \"footer\": \"page-module___8aEwW__footer\",\n  \"logo\": \"page-module___8aEwW__logo\",\n  \"main\": \"page-module___8aEwW__main\",\n  \"page\": \"page-module___8aEwW__page\",\n  \"primary\": \"page-module___8aEwW__primary\",\n  \"secondary\": \"page-module___8aEwW__secondary\",\n});\n"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"}},
+    {"offset": {"line": 38, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Dustin/Documents/IOD/PhotoLodge/MiniProject2/photolodge-app/src/app/page.js"],"sourcesContent":["import Image from \"next/image\";\nimport styles from \"./page.module.css\";\nimport NavBar from \"../components/NavBar.jsx\";\n\nexport default function Home() {\n  return (\n    <div className={\"Home\"}>\n      Hello World.\n    </div>\n  );\n}\n"],"names":[],"mappings":";;;;AAAA;AACA;AACA;;;;;AAEe,SAAS;IACtB,qBACE,8OAAC;QAAI,WAAW;kBAAQ;;;;;;AAI5B","debugId":null}}]
+}

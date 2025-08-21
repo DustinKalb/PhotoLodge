@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Dustin/Documents/IOD/PhotoLodge/MiniProject2/photolodge-app/src/app/layout.js"],"sourcesContent":["// All layouts support nesting via children prop\nexport default function RootLayout({ children }) {\n  // Root layout must render the <html> and <body> elements\n  return (\n    <html lang=\"en\">\n      <body className={inter.className}>\n        <NavBar />\n        {children}\n      </body>\n    </html>\n  );\n}"],"names":[],"mappings":"AAAA,gDAAgD;;;;;;AACjC,SAAS,WAAW,EAAE,QAAQ,EAAE;IAC7C,yDAAyD;IACzD,qBACE,8OAAC;QAAK,MAAK;kBACT,cAAA,8OAAC;YAAK,WAAW,MAAM,SAAS;;8BAC9B,8OAAC;;;;;gBACA;;;;;;;;;;;;AAIT","debugId":null}},
+    {"offset": {"line": 43, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Dustin/Documents/IOD/PhotoLodge/MiniProject2/photolodge-app/node_modules/next/src/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.ts"],"sourcesContent":["module.exports = require('../../module.compiled').vendored[\n  'react-rsc'\n].ReactJsxDevRuntime\n"],"names":["module","exports","require","vendored","ReactJsxDevRuntime"],"mappings":";AAAAA,OAAOC,OAAO,GAAGC,QAAQ,4HAAyBC,QAAQ,CACxD,YACD,CAACC,kBAAkB","ignoreList":[0],"debugId":null}}]
+}

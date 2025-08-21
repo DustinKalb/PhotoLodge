@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 15, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Dustin/Documents/IOD/PhotoLodge/MiniProject2/photolodge-app/src/components/MuiProvider.jsx"],"sourcesContent":["\"use client\";\r\n\r\nimport * as React from \"react\";\r\nimport { ThemeProvider, CssBaseline, createTheme } from \"@mui/material\";\r\n\r\nconst darkTheme = createTheme({\r\n  palette: {\r\n    mode: \"dark\",\r\n  }\r\n});\r\n\r\nexport default function MuiProvider({ children }) {\r\n  return (\r\n    <ThemeProvider theme={darkTheme}>\r\n      <CssBaseline />\r\n      {children}\r\n    </ThemeProvider>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;AAEA;AACA;AAAA;AAAA;AAHA;;;;AAKA,MAAM,YAAY,CAAA,GAAA,2MAAA,CAAA,cAAW,AAAD,EAAE;IAC5B,SAAS;QACP,MAAM;IACR;AACF;AAEe,SAAS,YAAY,EAAE,QAAQ,EAAE;IAC9C,qBACE,8OAAC,+MAAA,CAAA,gBAAa;QAAC,OAAO;;0BACpB,8OAAC,gNAAA,CAAA,cAAW;;;;;YACX;;;;;;;AAGP","debugId":null}}]
+}
