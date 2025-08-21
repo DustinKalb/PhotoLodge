@@ -142,9 +142,16 @@ var _s = __turbopack_context__.k.signature();
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "NavBar.useEffect": ()=>{
             // This runs only on the client
+            const userId = localStorage.getItem("userId");
+            if (!userId) {
+                router.push("/login");
+                return;
+            }
             setUsername(localStorage.getItem("username") || "");
         }
-    }["NavBar.useEffect"], []);
+    }["NavBar.useEffect"], [
+        router
+    ]);
     const handleMenuOpen = (event)=>{
         setAnchorEl(event.currentTarget);
     };
@@ -153,6 +160,7 @@ var _s = __turbopack_context__.k.signature();
     };
     const handleLogout = ()=>{
         localStorage.removeItem("userId");
+        localStorage.removeItem("username");
         handleMenuClose();
         router.push("/login");
     };
@@ -174,7 +182,7 @@ var _s = __turbopack_context__.k.signature();
                         className: "navbar-logo"
                     }, void 0, false, {
                         fileName: "[project]/src/components/NavBar/NavBar.jsx",
-                        lineNumber: 47,
+                        lineNumber: 53,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Typography$2f$Typography$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -188,13 +196,13 @@ var _s = __turbopack_context__.k.signature();
                                 children: "Lodge"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/NavBar/NavBar.jsx",
-                                lineNumber: 55,
+                                lineNumber: 61,
                                 columnNumber: 18
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/NavBar/NavBar.jsx",
-                        lineNumber: 54,
+                        lineNumber: 60,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Box$2f$Box$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -206,17 +214,17 @@ var _s = __turbopack_context__.k.signature();
                                 onChange: setSearch
                             }, void 0, false, {
                                 fileName: "[project]/src/components/NavBar/NavBar.jsx",
-                                lineNumber: 59,
+                                lineNumber: 65,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/NavBar/NavBar.jsx",
-                            lineNumber: 58,
+                            lineNumber: 64,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/NavBar/NavBar.jsx",
-                        lineNumber: 57,
+                        lineNumber: 63,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -224,7 +232,7 @@ var _s = __turbopack_context__.k.signature();
                         children: username
                     }, void 0, false, {
                         fileName: "[project]/src/components/NavBar/NavBar.jsx",
-                        lineNumber: 62,
+                        lineNumber: 68,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$IconButton$2f$IconButton$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -235,12 +243,12 @@ var _s = __turbopack_context__.k.signature();
                             className: "navbar-account-icon"
                         }, void 0, false, {
                             fileName: "[project]/src/components/NavBar/NavBar.jsx",
-                            lineNumber: 64,
+                            lineNumber: 70,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/NavBar/NavBar.jsx",
-                        lineNumber: 63,
+                        lineNumber: 69,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Menu$2f$Menu$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -252,28 +260,28 @@ var _s = __turbopack_context__.k.signature();
                             children: "Logout"
                         }, void 0, false, {
                             fileName: "[project]/src/components/NavBar/NavBar.jsx",
-                            lineNumber: 71,
+                            lineNumber: 77,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/NavBar/NavBar.jsx",
-                        lineNumber: 66,
+                        lineNumber: 72,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/NavBar/NavBar.jsx",
-                lineNumber: 46,
+                lineNumber: 52,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/components/NavBar/NavBar.jsx",
-            lineNumber: 45,
+            lineNumber: 51,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/NavBar/NavBar.jsx",
-        lineNumber: 44,
+        lineNumber: 50,
         columnNumber: 5
     }, this);
 }

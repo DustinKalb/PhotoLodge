@@ -24,8 +24,13 @@ function NavBar() {
   const [username, setUsername] = React.useState("");
   React.useEffect(() => {
     // This runs only on the client
+    const userId = localStorage.getItem("userId");
+    if (!userId) {
+      router.push("/login");
+      return;
+    }
     setUsername(localStorage.getItem("username") || "");
-  }, []);
+  }, [router]);
 
   const handleMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -36,6 +41,7 @@ function NavBar() {
 
   const handleLogout = () => {
     localStorage.removeItem("userId");
+    localStorage.removeItem("username");
     handleMenuClose();
     router.push("/login");
   };
