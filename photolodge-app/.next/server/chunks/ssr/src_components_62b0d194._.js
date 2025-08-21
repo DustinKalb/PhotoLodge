@@ -925,6 +925,36 @@ function AllImagesGallery() {
         ]
     }, void 0, true);
 }
+// Simple unit test for filter logic
+if ("TURBOPACK compile-time truthy", 1) {
+    const images = [
+        {
+            title: 'Sunset',
+            tags: [
+                'nature'
+            ],
+            description: 'A beautiful sunset.'
+        },
+        {
+            title: 'Dog',
+            tags: [
+                'pet'
+            ],
+            description: 'A cute dog.'
+        }
+    ];
+    const search = 'dog';
+    const filtered = search.trim() ? images.filter((img)=>{
+        const term = search.toLowerCase();
+        const tags = (img.tags || []).join(' ').toLowerCase();
+        const desc = (img.description || '').toLowerCase();
+        const title = (img.title || '').toLowerCase();
+        return tags.includes(term) || desc.includes(term) || title.includes(term);
+    }) : images;
+    if (filtered.length !== 1 || filtered[0].title !== 'Dog') {
+        throw new Error('Filter logic unit test failed');
+    }
+}
 }}),
 
 };

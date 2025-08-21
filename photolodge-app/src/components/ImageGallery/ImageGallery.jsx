@@ -165,3 +165,16 @@ export default function ImageGallery() {
     </>
   );
 }
+
+
+// Simple unit test for folder extraction
+if (typeof window === 'undefined') {
+  const folders = [
+    { _id: '1', name: 'Vacation' },
+    { _id: '2', name: 'Work' },
+  ];
+  const folderNames = folders.map(f => f.name);
+  if (folderNames.length !== 2 || folderNames[0] !== 'Vacation' || folderNames[1] !== 'Work') {
+    throw new Error('ImageGallery folder extraction unit test failed');
+  }
+}

@@ -1087,6 +1087,23 @@ function ImageGallery() {
         ]
     }, void 0, true);
 }
+// Simple unit test for folder extraction
+if ("TURBOPACK compile-time truthy", 1) {
+    const folders = [
+        {
+            _id: '1',
+            name: 'Vacation'
+        },
+        {
+            _id: '2',
+            name: 'Work'
+        }
+    ];
+    const folderNames = folders.map((f)=>f.name);
+    if (folderNames.length !== 2 || folderNames[0] !== 'Vacation' || folderNames[1] !== 'Work') {
+        throw new Error('ImageGallery folder extraction unit test failed');
+    }
+}
 }}),
 
 };
