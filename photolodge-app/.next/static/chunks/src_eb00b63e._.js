@@ -8,6 +8,7 @@ var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_
 __turbopack_context__.s({
     "default": (()=>ImagePreview)
 });
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/build/polyfills/process.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$icons$2d$material$2f$esm$2f$EditRounded$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@mui/icons-material/esm/EditRounded.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$icons$2d$material$2f$esm$2f$Delete$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@mui/icons-material/esm/Delete.js [app-client] (ecmascript)");
@@ -29,13 +30,14 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
+const apiBase = ("TURBOPACK compile-time value", "http://ec2-54-146-16-230.compute-1.amazonaws.com:8080");
 ;
 function ImagePreview({ image, onClose, onEdit, onDelete }) {
     _s();
     const [dialogOpen, setDialogOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     if (!image) return null;
     const handleDelete = async ()=>{
-        await fetch(`http://localhost:8080/api/posts/${image._id}`, {
+        await fetch(`${apiBase}/api/posts/${image._id}`, {
             method: "DELETE"
         });
         if (onDelete) onDelete();
@@ -49,14 +51,14 @@ function ImagePreview({ image, onClose, onEdit, onDelete }) {
                 tabIndex: -1
             }, void 0, false, {
                 fileName: "[project]/src/components/ImagePreview/ImagePreview.jsx",
-                lineNumber: 24,
+                lineNumber: 25,
                 columnNumber: 3
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                 children: image.title
             }, void 0, false, {
                 fileName: "[project]/src/components/ImagePreview/ImagePreview.jsx",
-                lineNumber: 25,
+                lineNumber: 26,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -69,24 +71,24 @@ function ImagePreview({ image, onClose, onEdit, onDelete }) {
                         ]
                     }, tag + i, true, {
                         fileName: "[project]/src/components/ImagePreview/ImagePreview.jsx",
-                        lineNumber: 28,
+                        lineNumber: 29,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/components/ImagePreview/ImagePreview.jsx",
-                lineNumber: 26,
+                lineNumber: 27,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                 children: image.description
             }, void 0, false, {
                 fileName: "[project]/src/components/ImagePreview/ImagePreview.jsx",
-                lineNumber: 36,
+                lineNumber: 37,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                 fileName: "[project]/src/components/ImagePreview/ImagePreview.jsx",
-                lineNumber: 37,
+                lineNumber: 38,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -97,12 +99,12 @@ function ImagePreview({ image, onClose, onEdit, onDelete }) {
                         className: "image-preview-action-btn",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$icons$2d$material$2f$esm$2f$EditRounded$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                             fileName: "[project]/src/components/ImagePreview/ImagePreview.jsx",
-                            lineNumber: 40,
+                            lineNumber: 41,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/ImagePreview/ImagePreview.jsx",
-                        lineNumber: 39,
+                        lineNumber: 40,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Button$2f$Button$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -110,18 +112,18 @@ function ImagePreview({ image, onClose, onEdit, onDelete }) {
                         className: "image-preview-action-btn",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$icons$2d$material$2f$esm$2f$Delete$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                             fileName: "[project]/src/components/ImagePreview/ImagePreview.jsx",
-                            lineNumber: 46,
+                            lineNumber: 47,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/ImagePreview/ImagePreview.jsx",
-                        lineNumber: 42,
+                        lineNumber: 43,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/ImagePreview/ImagePreview.jsx",
-                lineNumber: 38,
+                lineNumber: 39,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Dialog$2f$Dialog$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -135,7 +137,7 @@ function ImagePreview({ image, onClose, onEdit, onDelete }) {
                         children: "Delete Image?"
                     }, void 0, false, {
                         fileName: "[project]/src/components/ImagePreview/ImagePreview.jsx",
-                        lineNumber: 55,
+                        lineNumber: 56,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$DialogContent$2f$DialogContent$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -144,12 +146,12 @@ function ImagePreview({ image, onClose, onEdit, onDelete }) {
                             children: "Are you sure you want to delete this image? This action cannot be undone."
                         }, void 0, false, {
                             fileName: "[project]/src/components/ImagePreview/ImagePreview.jsx",
-                            lineNumber: 57,
+                            lineNumber: 58,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/ImagePreview/ImagePreview.jsx",
-                        lineNumber: 56,
+                        lineNumber: 57,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$DialogActions$2f$DialogActions$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -159,7 +161,7 @@ function ImagePreview({ image, onClose, onEdit, onDelete }) {
                                 children: "Cancel"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/ImagePreview/ImagePreview.jsx",
-                                lineNumber: 62,
+                                lineNumber: 63,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Button$2f$Button$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -169,25 +171,25 @@ function ImagePreview({ image, onClose, onEdit, onDelete }) {
                                 children: "Delete"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/ImagePreview/ImagePreview.jsx",
-                                lineNumber: 63,
+                                lineNumber: 64,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/ImagePreview/ImagePreview.jsx",
-                        lineNumber: 61,
+                        lineNumber: 62,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/ImagePreview/ImagePreview.jsx",
-                lineNumber: 49,
+                lineNumber: 50,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/ImagePreview/ImagePreview.jsx",
-        lineNumber: 23,
+        lineNumber: 24,
         columnNumber: 5
     }, this);
 }
@@ -207,6 +209,7 @@ var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_
 __turbopack_context__.s({
     "default": (()=>EditForm)
 });
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/build/polyfills/process.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$FormControl$2f$FormControl$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@mui/material/esm/FormControl/FormControl.js [app-client] (ecmascript)");
@@ -232,20 +235,23 @@ function EditForm({ post, onSave, onClose }) {
     const [tags, setTags] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(post.tags.join(", "));
     const [folders, setFolders] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
     const [selectedFolder, setSelectedFolder] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(post.folderId || "");
+    const apiBase = ("TURBOPACK compile-time value", "http://ec2-54-146-16-230.compute-1.amazonaws.com:8080");
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "EditForm.useEffect": ()=>{
             const userId = localStorage.getItem("userId");
-            fetch(`http://localhost:8080/api/folders/user/${userId}`).then({
+            fetch(`${apiBase}/api/folders/user/${userId}`).then({
                 "EditForm.useEffect": (res)=>res.json()
             }["EditForm.useEffect"]).then({
                 "EditForm.useEffect": (data)=>setFolders(data.data || [])
             }["EditForm.useEffect"]);
         }
-    }["EditForm.useEffect"], []);
+    }["EditForm.useEffect"], [
+        apiBase
+    ]);
     async function handleEdit(e) {
         e.preventDefault();
         const tagsArray = tags.split(",").map((tag)=>tag.trim()).filter(Boolean);
-        await fetch(`http://localhost:8080/api/posts/${post._id}`, {
+        await fetch(`${apiBase}/api/posts/${post._id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -270,7 +276,7 @@ function EditForm({ post, onSave, onClose }) {
                 className: "edit-form-img"
             }, void 0, false, {
                 fileName: "[project]/src/components/EditForm/EditForm.jsx",
-                lineNumber: 45,
+                lineNumber: 44,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$TextField$2f$TextField$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -282,7 +288,7 @@ function EditForm({ post, onSave, onClose }) {
                 fullWidth: true
             }, void 0, false, {
                 fileName: "[project]/src/components/EditForm/EditForm.jsx",
-                lineNumber: 50,
+                lineNumber: 49,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$TextField$2f$TextField$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -295,7 +301,7 @@ function EditForm({ post, onSave, onClose }) {
                 fullWidth: true
             }, void 0, false, {
                 fileName: "[project]/src/components/EditForm/EditForm.jsx",
-                lineNumber: 58,
+                lineNumber: 57,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$TextField$2f$TextField$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -306,7 +312,7 @@ function EditForm({ post, onSave, onClose }) {
                 fullWidth: true
             }, void 0, false, {
                 fileName: "[project]/src/components/EditForm/EditForm.jsx",
-                lineNumber: 67,
+                lineNumber: 66,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$FormControl$2f$FormControl$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -318,7 +324,7 @@ function EditForm({ post, onSave, onClose }) {
                         children: "Folder"
                     }, void 0, false, {
                         fileName: "[project]/src/components/EditForm/EditForm.jsx",
-                        lineNumber: 75,
+                        lineNumber: 74,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Select$2f$Select$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -333,12 +339,12 @@ function EditForm({ post, onSave, onClose }) {
                                     children: "None"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/EditForm/EditForm.jsx",
-                                    lineNumber: 83,
+                                    lineNumber: 82,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/EditForm/EditForm.jsx",
-                                lineNumber: 82,
+                                lineNumber: 81,
                                 columnNumber: 11
                             }, this),
                             folders.map((folder)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$MenuItem$2f$MenuItem$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -346,19 +352,19 @@ function EditForm({ post, onSave, onClose }) {
                                     children: folder.name
                                 }, folder._id, false, {
                                     fileName: "[project]/src/components/EditForm/EditForm.jsx",
-                                    lineNumber: 86,
+                                    lineNumber: 85,
                                     columnNumber: 13
                                 }, this))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/EditForm/EditForm.jsx",
-                        lineNumber: 76,
+                        lineNumber: 75,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/EditForm/EditForm.jsx",
-                lineNumber: 74,
+                lineNumber: 73,
                 columnNumber: 3
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Button$2f$Button$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -368,13 +374,13 @@ function EditForm({ post, onSave, onClose }) {
                 children: "Save Changes"
             }, void 0, false, {
                 fileName: "[project]/src/components/EditForm/EditForm.jsx",
-                lineNumber: 92,
+                lineNumber: 91,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/EditForm/EditForm.jsx",
-        lineNumber: 44,
+        lineNumber: 43,
         columnNumber: 5
     }, this);
 }
@@ -394,6 +400,7 @@ var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_
 __turbopack_context__.s({
     "default": (()=>UploadForm)
 });
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/build/polyfills/process.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$FormControl$2f$FormControl$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@mui/material/esm/FormControl/FormControl.js [app-client] (ecmascript)");
@@ -406,6 +413,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$mat
 var _s = __turbopack_context__.k.signature();
 "use client";
 ;
+const apiBase = ("TURBOPACK compile-time value", "http://ec2-54-146-16-230.compute-1.amazonaws.com:8080");
 ;
 ;
 ;
@@ -442,7 +450,7 @@ function UploadForm({ onSave, onClose }) {
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "UploadForm.useEffect": ()=>{
             const userId = localStorage.getItem("userId");
-            fetch(`http://localhost:8080/api/folders/user/${userId}`).then({
+            fetch(`${apiBase}/api/folders/user/${userId}`).then({
                 "UploadForm.useEffect": (res)=>res.json()
             }["UploadForm.useEffect"]).then({
                 "UploadForm.useEffect": (data)=>setFolders(data.data || [])
@@ -455,7 +463,7 @@ function UploadForm({ onSave, onClose }) {
         const userId = localStorage.getItem("userId");
         formData.append("userId", userId); // <-- first
         formData.append("image", file); // <-- second
-        const res = await fetch("http://localhost:8080/api/posts/upload", {
+        const res = await fetch(`${apiBase}/api/posts/upload`, {
             method: "POST",
             body: formData
         });
@@ -478,7 +486,7 @@ function UploadForm({ onSave, onClose }) {
                 userId,
                 folderId: selectedFolder || null
             };
-            const response = await fetch("http://localhost:8080/api/posts/create", {
+            const response = await fetch(`${apiBase}/api/posts/create`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -509,7 +517,7 @@ function UploadForm({ onSave, onClose }) {
                 children: "Upload New Image"
             }, void 0, false, {
                 fileName: "[project]/src/components/UploadForm/UploadForm.jsx",
-                lineNumber: 98,
+                lineNumber: 99,
                 columnNumber: 7
             }, this),
             previewUrl && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
@@ -518,7 +526,7 @@ function UploadForm({ onSave, onClose }) {
                 className: "upload-form-preview"
             }, void 0, false, {
                 fileName: "[project]/src/components/UploadForm/UploadForm.jsx",
-                lineNumber: 100,
+                lineNumber: 101,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Button$2f$Button$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -535,13 +543,13 @@ function UploadForm({ onSave, onClose }) {
                         required: true
                     }, void 0, false, {
                         fileName: "[project]/src/components/UploadForm/UploadForm.jsx",
-                        lineNumber: 112,
+                        lineNumber: 113,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/UploadForm/UploadForm.jsx",
-                lineNumber: 106,
+                lineNumber: 107,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$TextField$2f$TextField$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -553,7 +561,7 @@ function UploadForm({ onSave, onClose }) {
                 fullWidth: true
             }, void 0, false, {
                 fileName: "[project]/src/components/UploadForm/UploadForm.jsx",
-                lineNumber: 120,
+                lineNumber: 121,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$TextField$2f$TextField$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -566,7 +574,7 @@ function UploadForm({ onSave, onClose }) {
                 fullWidth: true
             }, void 0, false, {
                 fileName: "[project]/src/components/UploadForm/UploadForm.jsx",
-                lineNumber: 128,
+                lineNumber: 129,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$TextField$2f$TextField$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -577,7 +585,7 @@ function UploadForm({ onSave, onClose }) {
                 fullWidth: true
             }, void 0, false, {
                 fileName: "[project]/src/components/UploadForm/UploadForm.jsx",
-                lineNumber: 137,
+                lineNumber: 138,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$FormControl$2f$FormControl$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -589,7 +597,7 @@ function UploadForm({ onSave, onClose }) {
                         children: "Folder"
                     }, void 0, false, {
                         fileName: "[project]/src/components/UploadForm/UploadForm.jsx",
-                        lineNumber: 145,
+                        lineNumber: 146,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Select$2f$Select$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -602,18 +610,18 @@ function UploadForm({ onSave, onClose }) {
                                 children: folder.name
                             }, folder._id, false, {
                                 fileName: "[project]/src/components/UploadForm/UploadForm.jsx",
-                                lineNumber: 153,
+                                lineNumber: 154,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/src/components/UploadForm/UploadForm.jsx",
-                        lineNumber: 146,
+                        lineNumber: 147,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/UploadForm/UploadForm.jsx",
-                lineNumber: 144,
+                lineNumber: 145,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Button$2f$Button$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -624,13 +632,13 @@ function UploadForm({ onSave, onClose }) {
                 children: loading ? "Uploading..." : "Save"
             }, void 0, false, {
                 fileName: "[project]/src/components/UploadForm/UploadForm.jsx",
-                lineNumber: 159,
+                lineNumber: 160,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/UploadForm/UploadForm.jsx",
-        lineNumber: 97,
+        lineNumber: 98,
         columnNumber: 5
     }, this);
 }
@@ -650,6 +658,7 @@ var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_
 __turbopack_context__.s({
     "default": (()=>NewFolderForm)
 });
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/build/polyfills/process.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$TextField$2f$TextField$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@mui/material/esm/TextField/TextField.js [app-client] (ecmascript)");
@@ -664,6 +673,7 @@ function NewFolderForm({ onSave, onClose }) {
     _s();
     const [folderName, setFolderName] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
     const [error, setError] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
+    const apiBase = ("TURBOPACK compile-time value", "http://ec2-54-146-16-230.compute-1.amazonaws.com:8080");
     const handleSubmit = async (e)=>{
         e.preventDefault();
         setError("");
@@ -673,7 +683,7 @@ function NewFolderForm({ onSave, onClose }) {
         }
         const userId = localStorage.getItem("userId");
         try {
-            const res = await fetch("http://localhost:8080/api/folders/create", {
+            const res = await fetch(`${apiBase}/api/folders/create`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -705,7 +715,7 @@ function NewFolderForm({ onSave, onClose }) {
                 children: "Create New Folder"
             }, void 0, false, {
                 fileName: "[project]/src/components/NewFolderForm/NewFolderForm.jsx",
-                lineNumber: 40,
+                lineNumber: 41,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$TextField$2f$TextField$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -717,7 +727,7 @@ function NewFolderForm({ onSave, onClose }) {
                 autoFocus: true
             }, void 0, false, {
                 fileName: "[project]/src/components/NewFolderForm/NewFolderForm.jsx",
-                lineNumber: 41,
+                lineNumber: 42,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -728,18 +738,18 @@ function NewFolderForm({ onSave, onClose }) {
                     children: "Create"
                 }, void 0, false, {
                     fileName: "[project]/src/components/NewFolderForm/NewFolderForm.jsx",
-                    lineNumber: 50,
+                    lineNumber: 51,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/NewFolderForm/NewFolderForm.jsx",
-                lineNumber: 49,
+                lineNumber: 50,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/NewFolderForm/NewFolderForm.jsx",
-        lineNumber: 39,
+        lineNumber: 40,
         columnNumber: 5
     }, this);
 }
@@ -866,6 +876,7 @@ var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_
 __turbopack_context__.s({
     "default": (()=>FolderImagesPage)
 });
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/build/polyfills/process.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-client] (ecmascript)");
@@ -882,6 +893,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$mat
 var _s = __turbopack_context__.k.signature();
 "use client";
 ;
+const apiBase = ("TURBOPACK compile-time value", "http://ec2-54-146-16-230.compute-1.amazonaws.com:8080");
 ;
 ;
 ;
@@ -904,7 +916,7 @@ function FolderImagesPage() {
     const [dialogOpen, setDialogOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "FolderImagesPage.useEffect": ()=>{
-            fetch(`http://localhost:8080/api/posts/folder/${folderId}`).then({
+            fetch(`${apiBase}/api/posts/folder/${folderId}`).then({
                 "FolderImagesPage.useEffect": (res)=>res.json()
             }["FolderImagesPage.useEffect"]).then({
                 "FolderImagesPage.useEffect": (data)=>setImages(data.data || [])
@@ -924,7 +936,7 @@ function FolderImagesPage() {
     const handleDelete = async ()=>{
         if (!selectedImage) return;
         if (!window.confirm("Are you sure you want to delete this image?")) return;
-        await fetch(`http://localhost:8080/api/posts/${selectedImage._id}`, {
+        await fetch(`${apiBase}/api/posts/${selectedImage._id}`, {
             method: "DELETE"
         });
         setImages(images.filter((img)=>img._id !== selectedImage._id));
@@ -932,12 +944,12 @@ function FolderImagesPage() {
     };
     const handleSave = ()=>{
         // After editing, refresh images
-        fetch(`http://localhost:8080/api/posts/folder/${folderId}`).then((res)=>res.json()).then((data)=>setImages(data.data || []));
+        fetch(`${apiBase}/api/posts/folder/${folderId}`).then((res)=>res.json()).then((data)=>setImages(data.data || []));
         setModalOpen(false);
     };
     // Delete the folder
     const handleDeleteFolder = async ()=>{
-        await fetch(`http://localhost:8080/api/folders/${folderId}`, {
+        await fetch(`${apiBase}/api/folders/${folderId}`, {
             method: "DELETE"
         });
         router.push("/");
@@ -951,12 +963,12 @@ function FolderImagesPage() {
                 "aria-label": "Delete Folder",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$icons$2d$material$2f$esm$2f$DeleteRounded$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/src/app/folder/[folderId]/page.jsx",
-                    lineNumber: 75,
+                    lineNumber: 76,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/folder/[folderId]/page.jsx",
-                lineNumber: 70,
+                lineNumber: 71,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Dialog$2f$Dialog$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -970,7 +982,7 @@ function FolderImagesPage() {
                         children: "Delete Folder?"
                     }, void 0, false, {
                         fileName: "[project]/src/app/folder/[folderId]/page.jsx",
-                        lineNumber: 83,
+                        lineNumber: 84,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$DialogContent$2f$DialogContent$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -979,12 +991,12 @@ function FolderImagesPage() {
                             children: "Are you sure you want to delete this folder (Contained images will not be deleted)? This action cannot be undone."
                         }, void 0, false, {
                             fileName: "[project]/src/app/folder/[folderId]/page.jsx",
-                            lineNumber: 85,
+                            lineNumber: 86,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/folder/[folderId]/page.jsx",
-                        lineNumber: 84,
+                        lineNumber: 85,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$DialogActions$2f$DialogActions$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -994,7 +1006,7 @@ function FolderImagesPage() {
                                 children: "Cancel"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/folder/[folderId]/page.jsx",
-                                lineNumber: 90,
+                                lineNumber: 91,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Button$2f$Button$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1007,19 +1019,19 @@ function FolderImagesPage() {
                                 children: "Delete"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/folder/[folderId]/page.jsx",
-                                lineNumber: 91,
+                                lineNumber: 92,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/folder/[folderId]/page.jsx",
-                        lineNumber: 89,
+                        lineNumber: 90,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/folder/[folderId]/page.jsx",
-                lineNumber: 77,
+                lineNumber: 78,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
@@ -1027,7 +1039,7 @@ function FolderImagesPage() {
                 children: "Images in this Folder"
             }, void 0, false, {
                 fileName: "[project]/src/app/folder/[folderId]/page.jsx",
-                lineNumber: 103,
+                lineNumber: 104,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1041,17 +1053,17 @@ function FolderImagesPage() {
                             className: "folder-page-image"
                         }, void 0, false, {
                             fileName: "[project]/src/app/folder/[folderId]/page.jsx",
-                            lineNumber: 111,
+                            lineNumber: 112,
                             columnNumber: 13
                         }, this)
                     }, img._id, false, {
                         fileName: "[project]/src/app/folder/[folderId]/page.jsx",
-                        lineNumber: 106,
+                        lineNumber: 107,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/app/folder/[folderId]/page.jsx",
-                lineNumber: 104,
+                lineNumber: 105,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ImageModal$2f$ImageModal$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1064,13 +1076,13 @@ function FolderImagesPage() {
                 onSave: handleSave
             }, void 0, false, {
                 fileName: "[project]/src/app/folder/[folderId]/page.jsx",
-                lineNumber: 119,
+                lineNumber: 120,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/folder/[folderId]/page.jsx",
-        lineNumber: 68,
+        lineNumber: 69,
         columnNumber: 5
     }, this);
 }

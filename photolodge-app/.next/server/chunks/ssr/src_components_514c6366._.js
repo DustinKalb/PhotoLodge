@@ -842,7 +842,7 @@ function ImageGallery() {
         fetch(`${apiBase}/api/posts/user/${userId}`).then((res)=>res.json()).then((data)=>{
             setImages(data.data);
         });
-        fetch(`http://localhost:8080/api/folders/user/${userId}`).then((res)=>res.json()).then((data)=>{
+        fetch(`${apiBase}/api/folders/user/${userId}`).then((res)=>res.json()).then((data)=>{
             setFolders(data.data || []);
         });
     };
