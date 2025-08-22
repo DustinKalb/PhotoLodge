@@ -13,8 +13,8 @@ export default function EditForm({ post, onSave, onClose }) {
 
   useEffect(() => {
     const userId = localStorage.getItem("userId");
-  const apiBase = process.env.NEXT_PUBLIC_API_URL;
-  fetch(`${apiBase}/api/folders/user/${userId}`)
+  // ...existing code...
+  fetch(`http://ec2-54-146-16-230.compute-1.amazonaws.com:8080/api/folders/user/${userId}`)
       .then(res => res.json())
       .then(data => setFolders(data.data || []));
   }, []);
@@ -23,7 +23,7 @@ export default function EditForm({ post, onSave, onClose }) {
     e.preventDefault();
     const tagsArray = tags.split(",").map(tag => tag.trim()).filter(Boolean);
 
-  await fetch(`${apiBase}/api/posts/${post._id}`, {
+  await fetch(`http://ec2-54-146-16-230.compute-1.amazonaws.com:8080/api/posts/${post._id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

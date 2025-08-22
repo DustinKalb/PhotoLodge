@@ -17,8 +17,8 @@ export default function UploadForm({ onSave, onClose }) {
 
   useEffect(() => {
     const userId = localStorage.getItem("userId");
-  const apiBase = process.env.NEXT_PUBLIC_API_URL;
-  fetch(`${apiBase}/api/folders/user/${userId}`)
+  // ...existing code...
+  fetch(`http://ec2-54-146-16-230.compute-1.amazonaws.com:8080/api/folders/user/${userId}`)
       .then(res => res.json())
       .then(data => setFolders(data.data || []));
   }, []);
@@ -30,7 +30,7 @@ export default function UploadForm({ onSave, onClose }) {
     formData.append("userId", userId); // <-- first
     formData.append("image", file);    // <-- second
 
-  const res = await fetch(`${apiBase}/api/posts/upload`, {
+  const res = await fetch(`http://ec2-54-146-16-230.compute-1.amazonaws.com:8080/api/posts/upload`, {
       method: "POST",
       body: formData,
     });
@@ -58,7 +58,7 @@ export default function UploadForm({ onSave, onClose }) {
         folderId: selectedFolder || null, // This will be null if nothing is selected
       };
 
-  const response = await fetch(`${apiBase}/api/posts/create`, {
+  const response = await fetch(`http://ec2-54-146-16-230.compute-1.amazonaws.com:8080/api/posts/create`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(postData),

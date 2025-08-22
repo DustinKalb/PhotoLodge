@@ -14,8 +14,8 @@ export default function LoginPage() {
     const handleLogin = async (e) => {
         e.preventDefault();
         setError("");
-  const apiBase = process.env.NEXT_PUBLIC_API_URL;
-  const res = await fetch(`${apiBase}/api/users/login`, {
+  // ...existing code...
+  const res = await fetch(`http://ec2-54-146-16-230.compute-1.amazonaws.com:8080/api/users/login`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ username, password }),
