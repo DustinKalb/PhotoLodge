@@ -17,8 +17,6 @@ export default function ImageModal({ open, mode: initialMode = "preview", image,
   return (
     <Modal open={open} onClose={onClose}>
       <Box className="image-modal-box">
-        {/* Debug line, optional: */}
-        {/* <div>Current mode: {mode}</div> */}
         {mode === "preview" && image && (
           <ImagePreview
             image={image}

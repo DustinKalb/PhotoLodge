@@ -7,7 +7,6 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import { useState } from "react";
-const apiBase = process.env.NEXT_PUBLIC_API_URL;
 import './ImagePreview.css';
 
 export default function ImagePreview({ image, onClose, onEdit, onDelete }) {
@@ -16,7 +15,7 @@ export default function ImagePreview({ image, onClose, onEdit, onDelete }) {
   if (!image) return null;
 
   const handleDelete = async () => {
-    await fetch(`${apiBase}/api/posts/${image._id}`, { method: "DELETE" });
+  await fetch(`http://ec2-54-146-16-230.compute-1.amazonaws.com:8080/api/posts/${image._id}`, { method: "DELETE" });
     if (onDelete) onDelete();
   };
 

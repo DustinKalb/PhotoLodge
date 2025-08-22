@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-const apiBase = process.env.NEXT_PUBLIC_API_URL;
+// ...existing code...
 import { useSearch } from "../../context/SearchContext.jsx";
 import ImageModal from "../ImageModal/ImageModal.jsx";
 import FloatingActionButton from "../FloatingActionButton/FloatingActionButton.jsx";
@@ -22,12 +22,12 @@ export default function ImageGallery() {
   const fetchImages = () => {
     const userId = localStorage.getItem("userId");
     if (!userId) return;
-  fetch(`${apiBase}/api/posts/user/${userId}`)
+    fetch(`http://ec2-54-146-16-230.compute-1.amazonaws.com:8080/api/posts/user/${userId}`)
       .then(res => res.json())
       .then(data => {
         setImages(data.data);
       });
-  fetch(`${apiBase}/api/folders/user/${userId}`)
+    fetch(`http://ec2-54-146-16-230.compute-1.amazonaws.com:8080/api/folders/user/${userId}`)
       .then(res => res.json())
       .then(data => {
         setFolders(data.data || []);
@@ -166,7 +166,6 @@ export default function ImageGallery() {
     </>
   );
 }
-
 
 // Simple unit test for folder extraction
 if (typeof window === 'undefined') {

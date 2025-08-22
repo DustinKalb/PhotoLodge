@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-// ...existing code...
 import { useParams, useRouter } from "next/navigation";
 import ImageModal from "../../../components/ImageModal/ImageModal";
 import IconButton from "@mui/material/IconButton";

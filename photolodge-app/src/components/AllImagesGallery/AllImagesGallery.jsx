@@ -18,7 +18,7 @@ export default function AllImagesGallery() {
   const fetchImages = () => {
     const userId = localStorage.getItem("userId");
     if (!userId) return;
-  fetch(`${apiBase}/api/posts/user/${userId}?t=${Date.now()}`)
+    fetch(`http://ec2-54-146-16-230.compute-1.amazonaws.com:8080/api/posts/user/${userId}?t=${Date.now()}`)
       .then(res => res.json())
       .then(data => {
         setImages(data.data);

@@ -16,7 +16,6 @@ export default function SignUpPage() {
     e.preventDefault();
     setError("");
     setSuccess("");
-  // ...existing code...
   const res = await fetch(`http://ec2-54-146-16-230.compute-1.amazonaws.com:8080/api/users/create`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },

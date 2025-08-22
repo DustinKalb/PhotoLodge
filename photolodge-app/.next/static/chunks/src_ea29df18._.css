@@ -180,11 +180,6 @@
   box-shadow: 0 2px 8px #00000014;
 }
 
-.folder-page-image-card:hover {
-  transform: translateY(-2px)scale(1.03);
-  box-shadow: 0 4px 16px #d2b48c2e;
-}
-
 .folder-page-image {
   object-fit: cover;
   width: 100%;

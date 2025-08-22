@@ -2,7 +2,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-// ...existing code...
 import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
 import Select from "@mui/material/Select";
@@ -41,8 +40,8 @@ export default function UploadForm({ onSave, onClose }) {
   async function uploadImage(file) {
     const formData = new FormData();
     const userId = localStorage.getItem("userId");
-    formData.append("userId", userId); // <-- first
-    formData.append("image", file);    // <-- second
+    formData.append("userId", userId);
+    formData.append("image", file);
 
   const res = await fetch(`http://ec2-54-146-16-230.compute-1.amazonaws.com:8080/api/posts/upload`, {
       method: "POST",
@@ -69,7 +68,7 @@ export default function UploadForm({ onSave, onClose }) {
         tags: tagsArray,
         imageUrl,
         userId,
-        folderId: selectedFolder || null, // This will be null if nothing is selected
+        folderId: selectedFolder || null,
       };
 
   const response = await fetch(`http://ec2-54-146-16-230.compute-1.amazonaws.com:8080/api/posts/create`, {
