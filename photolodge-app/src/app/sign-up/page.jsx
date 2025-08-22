@@ -43,7 +43,7 @@ export default function SignUpPage() {
       }}
     >
       <img
-        src="/images/photoLodgeLogo.png"
+        src="https://res.cloudinary.com/dg7pw9uic/image/upload/v1755829320/photolodgelogo_itegie.png"
         alt="PhotoLodge Logo"
         width={175}
         height={175}

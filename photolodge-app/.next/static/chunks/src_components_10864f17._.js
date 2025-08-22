@@ -30,7 +30,7 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
-const apiBase = ("TURBOPACK compile-time value", "http://ec2-54-146-16-230.compute-1.amazonaws.com:8080");
+const apiBase = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].env.NEXT_PUBLIC_API_URL;
 ;
 function ImagePreview({ image, onClose, onEdit, onDelete }) {
     _s();
@@ -235,7 +235,7 @@ function EditForm({ post, onSave, onClose }) {
     const [tags, setTags] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(post.tags.join(", "));
     const [folders, setFolders] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
     const [selectedFolder, setSelectedFolder] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(post.folderId || "");
-    const apiBase = ("TURBOPACK compile-time value", "http://ec2-54-146-16-230.compute-1.amazonaws.com:8080");
+    const apiBase = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].env.NEXT_PUBLIC_API_URL;
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "EditForm.useEffect": ()=>{
             const userId = localStorage.getItem("userId");
@@ -400,9 +400,9 @@ var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_
 __turbopack_context__.s({
     "default": (()=>UploadForm)
 });
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/build/polyfills/process.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+// ...existing code...
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$FormControl$2f$FormControl$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@mui/material/esm/FormControl/FormControl.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$InputLabel$2f$InputLabel$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@mui/material/esm/InputLabel/InputLabel.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Select$2f$Select$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@mui/material/esm/Select/Select.js [app-client] (ecmascript)");
@@ -413,7 +413,6 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$mat
 var _s = __turbopack_context__.k.signature();
 "use client";
 ;
-const apiBase = ("TURBOPACK compile-time value", "http://ec2-54-146-16-230.compute-1.amazonaws.com:8080");
 ;
 ;
 ;
@@ -450,7 +449,7 @@ function UploadForm({ onSave, onClose }) {
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "UploadForm.useEffect": ()=>{
             const userId = localStorage.getItem("userId");
-            fetch(`${apiBase}/api/folders/user/${userId}`).then({
+            fetch(`http://ec2-54-146-16-230.compute-1.amazonaws.com:8080/api/folders/user/${userId}`).then({
                 "UploadForm.useEffect": (res)=>res.json()
             }["UploadForm.useEffect"]).then({
                 "UploadForm.useEffect": (data)=>setFolders(data.data || [])
@@ -463,7 +462,7 @@ function UploadForm({ onSave, onClose }) {
         const userId = localStorage.getItem("userId");
         formData.append("userId", userId); // <-- first
         formData.append("image", file); // <-- second
-        const res = await fetch(`${apiBase}/api/posts/upload`, {
+        const res = await fetch(`http://ec2-54-146-16-230.compute-1.amazonaws.com:8080/api/posts/upload`, {
             method: "POST",
             body: formData
         });
@@ -486,7 +485,7 @@ function UploadForm({ onSave, onClose }) {
                 userId,
                 folderId: selectedFolder || null
             };
-            const response = await fetch(`${apiBase}/api/posts/create`, {
+            const response = await fetch(`http://ec2-54-146-16-230.compute-1.amazonaws.com:8080/api/posts/create`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -673,7 +672,7 @@ function NewFolderForm({ onSave, onClose }) {
     _s();
     const [folderName, setFolderName] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
     const [error, setError] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
-    const apiBase = ("TURBOPACK compile-time value", "http://ec2-54-146-16-230.compute-1.amazonaws.com:8080");
+    const apiBase = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].env.NEXT_PUBLIC_API_URL;
     const handleSubmit = async (e)=>{
         e.preventDefault();
         setError("");
@@ -889,7 +888,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var _s = __turbopack_context__.k.signature();
 "use client";
 ;
-const apiBase = ("TURBOPACK compile-time value", "http://ec2-54-146-16-230.compute-1.amazonaws.com:8080");
+const apiBase = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].env.NEXT_PUBLIC_API_URL;
 ;
 ;
 ;

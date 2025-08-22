@@ -32,7 +32,7 @@ export default function LoginPage() {
 
 return (
     <form onSubmit={handleLogin} style={{ minHeight: "90vh", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
-      <img src="/images/photoLodgeLogo.png" alt="PhotoLodge Logo" width={175} height={175} />
+  <img src="https://res.cloudinary.com/dg7pw9uic/image/upload/v1755829320/photolodgelogo_itegie.png" alt="PhotoLodge Logo" width={175} height={175} />
       <div>
         <br />
         <h1>Welcome to PhotoLodge</h1>
