@@ -6,7 +6,7 @@ import './NewFolderForm.css';
 export default function NewFolderForm({ onSave, onClose }) {
   const [folderName, setFolderName] = React.useState("");
   const [error, setError] = React.useState("");
-  const apiBase = process.env.NEXT_PUBLIC_API_URL;
+  // ...existing code...
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -17,7 +17,7 @@ export default function NewFolderForm({ onSave, onClose }) {
     }
     const userId = localStorage.getItem("userId");
     try {
-      const res = await fetch(`${apiBase}/api/folders/create`, {
+  const res = await fetch(`http://ec2-54-146-16-230.compute-1.amazonaws.com:8080/api/folders/create`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name: folderName, userId }),
